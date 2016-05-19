@@ -1,3 +1,2 @@
-# LogisticApp
-第一个项目
-第二个项目
+# MarketMonitorApp
+行情监控
