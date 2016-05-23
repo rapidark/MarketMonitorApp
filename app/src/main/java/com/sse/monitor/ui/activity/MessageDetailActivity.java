@@ -15,7 +15,7 @@ import com.sse.monitor.logistic.LogisticApi;
 import com.sse.monitor.ui.fragment.MessageDetailFragment;
 
 /**
- * Created by Maik on 2016/5/12.
+ * Created by Eric on 2016/5/12.
  */
 public class MessageDetailActivity extends BaseActivity implements HasComponent<MessageComponent> {
     private static final String INSTANCE_STATE_PARAM_MESSAGE = "org.shiki.STATE_PARAM_MESSAGE_ID";

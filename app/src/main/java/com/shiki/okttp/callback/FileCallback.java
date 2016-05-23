@@ -10,7 +10,7 @@ import java.io.InputStream;
 import okhttp3.Response;
 
 /**
- * Created by Maik on 2016/3/24.
+ * Created by Eric on 2016/3/24.
  */
 public abstract class FileCallback extends Callback<File> {
     private String destFileDir;

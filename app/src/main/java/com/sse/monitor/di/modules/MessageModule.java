@@ -7,7 +7,7 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by Maik on 2016/5/12.
+ * Created by Eric on 2016/5/12.
  */
 @Module
 public class MessageModule {

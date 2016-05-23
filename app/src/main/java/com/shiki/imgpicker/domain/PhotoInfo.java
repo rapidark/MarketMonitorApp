@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by Maik on 2016/2/23.
+ * Created by Eric on 2016/2/23.
  */
 public class PhotoInfo implements Parcelable {
     private int photoId;

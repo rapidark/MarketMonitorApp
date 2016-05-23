@@ -10,7 +10,7 @@ import com.squareup.okhttp.ResponseBody;
 import rx.Observable;
 
 /**
- * Created by Maik on 2016/5/3.
+ * Created by Eric on 2016/5/3.
  */
 public class AppModel implements IAppModel {
     private static final AppModel instance = new AppModel();

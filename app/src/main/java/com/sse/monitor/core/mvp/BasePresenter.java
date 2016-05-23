@@ -3,7 +3,7 @@ package com.sse.monitor.core.mvp;
 import rx.subscriptions.CompositeSubscription;
 
 /**
- * Created by Maik on 2016/4/29.
+ * Created by Eric on 2016/4/29.
  */
 public class BasePresenter<T extends MvpView> implements Presenter<T> {
     private T mMvpView;

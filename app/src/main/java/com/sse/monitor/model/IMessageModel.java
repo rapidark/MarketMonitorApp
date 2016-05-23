@@ -8,7 +8,7 @@ import java.util.List;
 import rx.Observable;
 
 /**
- * Created by Maik on 2016/5/10.
+ * Created by Eric on 2016/5/10.
  */
 public interface IMessageModel {
     Observable<ResultBean<List<MessageBean>>> getMessageList(String expressId);

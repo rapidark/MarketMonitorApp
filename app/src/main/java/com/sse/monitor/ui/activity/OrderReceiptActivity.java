@@ -10,7 +10,7 @@ import com.sse.monitor.di.components.OrderReceiptComponent;
 import com.sse.monitor.ui.fragment.OrderReceiptFragment;
 
 /**
- * Created by Maik on 2016/5/16.
+ * Created by Eric on 2016/5/16.
  */
 public class OrderReceiptActivity extends BaseActivity implements HasComponent<OrderReceiptComponent> {
     private OrderReceiptComponent orderReceiptComponent;

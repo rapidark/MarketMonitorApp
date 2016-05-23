@@ -3,7 +3,7 @@ package com.shiki.utils.coder;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class Base64Coder {
     public static final int DEFAULT = 0;

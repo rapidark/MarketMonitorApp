@@ -3,7 +3,7 @@ package com.shiki.utils;
 import android.content.Context;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class ResourceUtils {
     public ResourceUtils() {

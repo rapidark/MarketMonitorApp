@@ -22,7 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class FileUtils {
     public static final double KB = 1024.0D;

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.view.View.AccessibilityDelegate;
 
 /**
- * Created by Maik on 2016/2/26.
+ * Created by Eric on 2016/2/26.
  */
 public abstract class RecyclingPagerAdapter extends PagerAdapter {
     static final int IGNORE_ITEM_VIEW_TYPE = -1;

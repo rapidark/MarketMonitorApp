@@ -7,7 +7,7 @@ import com.sse.monitor.ui.fragment.OrderReceiptFragment;
 import dagger.Component;
 
 /**
- * Created by Maik on 2016/5/16.
+ * Created by Eric on 2016/5/16.
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = {ActivityModule.class})

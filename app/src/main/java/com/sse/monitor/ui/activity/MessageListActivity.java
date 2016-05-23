@@ -12,7 +12,7 @@ import com.sse.monitor.di.components.MessageComponent;
 import com.sse.monitor.ui.fragment.MessageListFragment;
 
 /**
- * Created by Maik on 2016/5/9.
+ * Created by Eric on 2016/5/9.
  */
 public class MessageListActivity extends BaseActivity implements HasComponent<MessageComponent> {
     private MessageComponent messageComponent;

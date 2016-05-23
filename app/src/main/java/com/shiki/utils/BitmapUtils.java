@@ -23,7 +23,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class BitmapUtils {
     public BitmapUtils() {

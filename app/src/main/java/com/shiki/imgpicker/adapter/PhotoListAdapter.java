@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Maik on 2016/2/24.
+ * Created by Eric on 2016/2/24.
  */
 public class PhotoListAdapter extends ViewHolderAdapter<PhotoListAdapter.PhotoViewHolder, PhotoInfo> {
     private Map<String, PhotoInfo> mSelectList;

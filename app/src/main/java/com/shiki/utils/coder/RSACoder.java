@@ -14,7 +14,7 @@ import java.security.spec.RSAPublicKeySpec;
 import javax.crypto.Cipher;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class RSACoder {
     public static final String KEY_ALGORITHM = "RSA";

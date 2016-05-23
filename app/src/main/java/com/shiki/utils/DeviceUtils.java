@@ -48,7 +48,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class DeviceUtils {
     public static final int NETWORK_CLASS_UNKNOWN = 0;

@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/24.
+ * Created by Eric on 2016/2/24.
  */
 public abstract class ViewHolderAdapter<VH extends ViewHolderAdapter.ViewHolder, T> extends BaseAdapter {
     private Context mContext;

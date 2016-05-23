@@ -6,7 +6,7 @@ import com.squareup.okhttp.Response;
 import java.io.IOException;
 
 /**
- * Created by Maik on 2016/4/27.
+ * Created by Eric on 2016/4/27.
  */
 public class LoggingInterceptor implements Interceptor {
 

@@ -8,7 +8,7 @@ import okhttp3.CookieJar;
 import okhttp3.HttpUrl;
 
 /**
- * Created by Maik on 2016/1/19.
+ * Created by Eric on 2016/1/19.
  */
 public final class SimpleCookieJar implements CookieJar {
     private final List<Cookie> allCookies = new ArrayList<>();

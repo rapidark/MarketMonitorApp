@@ -11,7 +11,7 @@ import okio.Okio;
 import okio.Sink;
 
 /**
- * Created by Maik on 2016/1/19.
+ * Created by Eric on 2016/1/19.
  */
 public class CountingRequestBody extends RequestBody {
     protected RequestBody delegate;

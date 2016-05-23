@@ -3,7 +3,7 @@ package com.shiki.utils.io;
 import java.nio.charset.Charset;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class Charsets {
     public static final Charset ISO_8859_1 = Charset.forName("ISO-8859-1");

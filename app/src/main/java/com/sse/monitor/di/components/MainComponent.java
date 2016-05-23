@@ -9,7 +9,7 @@ import com.sse.monitor.ui.fragment.ProfileFragment;
 import dagger.Component;
 
 /**
- * Created by Maik on 2016/5/17.
+ * Created by Eric on 2016/5/17.
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = {ActivityModule.class})

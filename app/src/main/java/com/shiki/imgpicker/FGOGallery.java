@@ -8,7 +8,7 @@ import com.shiki.imgpicker.domain.PhotoInfo;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/25.
+ * Created by Eric on 2016/2/25.
  */
 public class FGOGallery {
     private static OnHanlderResultCallback mCallback;

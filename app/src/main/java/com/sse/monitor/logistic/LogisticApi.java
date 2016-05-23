@@ -1,7 +1,7 @@
 package com.sse.monitor.logistic;
 
 /**
- * Created by Maik on 2016/4/19.
+ * Created by Eric on 2016/4/19.
  */
 public class LogisticApi {
     public static final String BASE_URL = "http://61.152.144.175/wlms/api/";

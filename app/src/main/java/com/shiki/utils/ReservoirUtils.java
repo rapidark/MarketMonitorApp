@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
 import rx.Observable;
 
 /**
- * Created by Maik on 2016/5/5.
+ * Created by Eric on 2016/5/5.
  */
 public class ReservoirUtils {
     private static final String TAG = "ReservoirUtils";

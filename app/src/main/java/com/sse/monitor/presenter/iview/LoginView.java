@@ -3,7 +3,7 @@ package com.sse.monitor.presenter.iview;
 import com.sse.monitor.core.mvp.MvpView;
 
 /**
- * Created by Maik on 2016/4/27.
+ * Created by Eric on 2016/4/27.
  */
 public interface LoginView extends MvpView {
     String getUserCode();

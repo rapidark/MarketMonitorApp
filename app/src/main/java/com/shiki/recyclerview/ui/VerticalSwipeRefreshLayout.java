@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 
 /**
- * Created by Maik on 2016/2/14.
+ * Created by Eric on 2016/2/14.
  */
 public class VerticalSwipeRefreshLayout extends SwipeRefreshLayout {
     private int mTouchSlop;

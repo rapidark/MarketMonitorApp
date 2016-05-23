@@ -13,7 +13,7 @@ import com.sse.monitor.di.modules.ActivityModule;
 import butterknife.ButterKnife;
 
 /**
- * Created by Maik on 2016/4/21.
+ * Created by Eric on 2016/4/21.
  */
 public abstract class BaseActivity extends AppCompatActivity {
 

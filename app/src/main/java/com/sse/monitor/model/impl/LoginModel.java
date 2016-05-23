@@ -8,7 +8,7 @@ import com.sse.monitor.model.ILoginModel;
 import rx.Observable;
 
 /**
- * Created by Maik on 2016/4/28.
+ * Created by Eric on 2016/4/28.
  */
 public class LoginModel implements ILoginModel {
     private static final LoginModel instance = new LoginModel();

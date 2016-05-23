@@ -17,7 +17,7 @@ import com.sse.monitor.presenter.iview.AppView;
 import butterknife.Bind;
 
 /**
- * Created by Maik on 2016/5/3.
+ * Created by Eric on 2016/5/3.
  */
 public class SplashActivity extends BaseActivity implements AppView {
     @Bind(R.id.rl_root) RelativeLayout rlRoot;

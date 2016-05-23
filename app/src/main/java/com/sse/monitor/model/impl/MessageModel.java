@@ -10,7 +10,7 @@ import java.util.List;
 import rx.Observable;
 
 /**
- * Created by Maik on 2016/5/10.
+ * Created by Eric on 2016/5/10.
  */
 public class MessageModel implements IMessageModel {
     private static final MessageModel instance = new MessageModel();

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/26.
+ * Created by Eric on 2016/2/26.
  */
 public abstract class ViewHolderRecyclingPagerAdapter<VH extends ViewHolderRecyclingPagerAdapter.ViewHolder, T> extends RecyclingPagerAdapter {
     private Context mContext;

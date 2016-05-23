@@ -18,7 +18,7 @@ import javax.inject.Inject;
 import butterknife.Bind;
 
 /**
- * Created by Maik on 2016/5/12.
+ * Created by Eric on 2016/5/12.
  */
 public class MessageDetailFragment extends BaseFragment implements MessageDetailView {
     @Inject

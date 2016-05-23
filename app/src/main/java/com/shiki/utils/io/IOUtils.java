@@ -34,7 +34,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/3/1.
+ * Created by Eric on 2016/3/1.
  */
 public class IOUtils {
     private static final int EOF = -1;

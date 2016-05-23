@@ -3,7 +3,7 @@ package com.shiki.imgpicker.domain;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/25.
+ * Created by Eric on 2016/2/25.
  */
 public class PhotoFolderInfo {
     private int folderId;

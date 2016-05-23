@@ -6,7 +6,7 @@ import com.sse.monitor.core.mvp.MvpView;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/5/9.
+ * Created by Eric on 2016/5/9.
  */
 public interface MessageListView extends MvpView {
     void renderMessageList(List<MessageBean> messageData);

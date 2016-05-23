@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/24.
+ * Created by Eric on 2016/2/24.
  */
 public class PhotoSelectActivity extends PhotoBaseActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
     private final int HANLDER_TAKE_PHOTO_EVENT = 1000;

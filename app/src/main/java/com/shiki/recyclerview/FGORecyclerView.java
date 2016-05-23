@@ -19,7 +19,7 @@ import com.shiki.recyclerview.ui.VerticalSwipeRefreshLayout;
 import com.sse.monitor.R;
 
 /**
- * Created by Maik on 2016/2/14.
+ * Created by Eric on 2016/2/14.
  */
 public class FGORecyclerView extends FrameLayout {
 

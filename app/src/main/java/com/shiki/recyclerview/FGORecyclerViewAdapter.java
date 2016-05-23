@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/14.
+ * Created by Eric on 2016/2/14.
  */
 public abstract class FGORecyclerViewAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     protected View customLoadMoreView = null;

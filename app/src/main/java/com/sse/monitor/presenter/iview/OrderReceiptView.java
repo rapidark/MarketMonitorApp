@@ -6,7 +6,7 @@ import com.sse.monitor.core.mvp.MvpView;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/5/16.
+ * Created by Eric on 2016/5/16.
  */
 public interface OrderReceiptView extends MvpView {
     void renderOrderList(List<OrderBean> orderData);

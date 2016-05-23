@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Maik on 2016/2/29.
+ * Created by Eric on 2016/2/29.
  */
 public class FGOGalleryUtil {
 

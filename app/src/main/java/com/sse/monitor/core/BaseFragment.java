@@ -12,7 +12,7 @@ import com.sse.monitor.di.HasComponent;
 import butterknife.ButterKnife;
 
 /**
- * Created by Maik on 2016/5/6.
+ * Created by Eric on 2016/5/6.
  */
 public abstract class BaseFragment extends Fragment {
     protected View self;

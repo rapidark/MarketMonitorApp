@@ -3,7 +3,7 @@ package com.sse.monitor.bean;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by Maik on 2016/5/3.
+ * Created by Eric on 2016/5/3.
  */
 public class VersionBean {
     @SerializedName("versionName") private String versionName;

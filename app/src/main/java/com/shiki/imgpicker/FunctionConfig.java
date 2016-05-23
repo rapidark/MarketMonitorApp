@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/23.
+ * Created by Eric on 2016/2/23.
  */
 public class FunctionConfig {
     private boolean mutiSelect;

@@ -13,7 +13,7 @@ import com.sse.monitor.di.modules.LogisticApiModule;
 import com.sse.monitor.logistic.LogisticApi;
 
 /**
- * Created by Maik on 2016/4/19.
+ * Created by Eric on 2016/4/19.
  */
 public class MonitorApplication extends Application {
     private static MonitorApplication instance = new MonitorApplication();

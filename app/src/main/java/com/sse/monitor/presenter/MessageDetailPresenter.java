@@ -17,7 +17,7 @@ import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by Maik on 2016/5/12.
+ * Created by Eric on 2016/5/12.
  */
 public class MessageDetailPresenter extends BasePresenter<MessageDetailView> {
     private MessageModel messageModel;

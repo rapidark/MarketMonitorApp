@@ -18,7 +18,7 @@ import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by Maik on 2016/4/29.
+ * Created by Eric on 2016/4/29.
  */
 public class LoginPresenter extends BasePresenter<LoginView> {
     private LoginModel loginModel;

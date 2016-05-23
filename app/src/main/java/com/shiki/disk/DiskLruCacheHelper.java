@@ -23,7 +23,7 @@ import java.io.OutputStreamWriter;
 import java.io.Serializable;
 
 /**
- * Created by Maik on 2016/3/8.
+ * Created by Eric on 2016/3/8.
  */
 public class DiskLruCacheHelper {
     private static final String DIR_NAME = "diskCache";

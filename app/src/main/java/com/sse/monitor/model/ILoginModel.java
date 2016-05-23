@@ -6,7 +6,7 @@ import com.sse.monitor.bean.UserBean;
 import rx.Observable;
 
 /**
- * Created by Maik on 2016/4/25.
+ * Created by Eric on 2016/4/25.
  */
 public interface ILoginModel {
     Observable<ResultBean<UserBean>> login(String usercode, String password);

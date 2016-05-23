@@ -5,7 +5,7 @@ import com.shiki.okttp.request.RequestCall;
 import java.util.Map;
 
 /**
- * Created by Maik on 2016/1/19.
+ * Created by Eric on 2016/1/19.
  */
 public abstract class OkHttpRequestBuilder {
     protected String url;

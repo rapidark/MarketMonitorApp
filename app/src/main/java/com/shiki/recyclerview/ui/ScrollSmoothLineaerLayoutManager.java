@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by Maik on 2016/2/14.
+ * Created by Eric on 2016/2/14.
  */
 public class ScrollSmoothLineaerLayoutManager extends LinearLayoutManager {
     private final int duration;

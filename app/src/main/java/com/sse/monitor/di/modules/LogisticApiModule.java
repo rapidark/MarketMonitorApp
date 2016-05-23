@@ -15,7 +15,7 @@ import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
 
 /**
- * Created by Maik on 2016/4/27.
+ * Created by Eric on 2016/4/27.
  */
 @Module
 public class LogisticApiModule {

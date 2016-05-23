@@ -11,7 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 /**
- * Created by Maik on 2016/4/18.
+ * Created by Eric on 2016/4/18.
  */
 public class SignatureView extends View {
     private static final float STROKE_WIDTH = 5f;

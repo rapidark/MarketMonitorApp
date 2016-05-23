@@ -9,7 +9,7 @@ import com.sse.monitor.ui.fragment.MessageListFragment;
 import dagger.Component;
 
 /**
- * Created by Maik on 2016/5/9.
+ * Created by Eric on 2016/5/9.
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = {ActivityModule.class, MessageModule.class})

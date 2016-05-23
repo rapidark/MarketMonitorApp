@@ -5,7 +5,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by Maik on 2016/1/19.
+ * Created by Eric on 2016/1/19.
  */
 public abstract class Callback<T> {
     /**

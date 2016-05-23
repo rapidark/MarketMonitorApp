@@ -4,7 +4,7 @@ import com.sse.monitor.bean.MessageBean;
 import com.sse.monitor.core.mvp.MvpView;
 
 /**
- * Created by Maik on 2016/5/12.
+ * Created by Eric on 2016/5/12.
  */
 public interface MessageDetailView extends MvpView {
     void renderMessageDetail(MessageBean message);

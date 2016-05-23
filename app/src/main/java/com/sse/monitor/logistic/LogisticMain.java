@@ -10,7 +10,7 @@ import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
 
 /**
- * Created by Maik on 2016/4/28.
+ * Created by Eric on 2016/4/28.
  */
 public class LogisticMain {
     private static LogisticMain instance;

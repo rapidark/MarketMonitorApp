@@ -22,7 +22,7 @@ import butterknife.Bind;
 import butterknife.OnCheckedChanged;
 
 /**
- * Created by Maik on 2016/5/16.
+ * Created by Eric on 2016/5/16.
  */
 public class OrderReceiptFragment extends BaseFragment implements OrderReceiptView {
     @Bind(R.id.fgo_recycler_view)

@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by Maik on 2016/5/9.
+ * Created by Eric on 2016/5/9.
  */
 public class MessageBean implements Parcelable {
     @SerializedName("messageId") private String messageId;

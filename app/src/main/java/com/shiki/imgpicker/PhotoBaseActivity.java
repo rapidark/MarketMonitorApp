@@ -20,7 +20,7 @@ import java.util.Date;
 import java.util.Random;
 
 /**
- * Created by Maik on 2016/2/26.
+ * Created by Eric on 2016/2/26.
  */
 public abstract class PhotoBaseActivity extends Activity {
     static final int TAKE_REQUEST_CODE = 2000;

@@ -21,7 +21,7 @@ import java.util.List;
 import butterknife.Bind;
 
 /**
- * Created by Maik on 2016/5/5.
+ * Created by Eric on 2016/5/5.
  */
 public class MainActivity extends BaseActivity implements HasComponent<MainComponent> {
     @Bind(R.id.vp_main) ViewPager vpMain;

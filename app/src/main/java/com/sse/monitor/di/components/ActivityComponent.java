@@ -8,7 +8,7 @@ import com.sse.monitor.di.modules.ActivityModule;
 import dagger.Component;
 
 /**
- * Created by Maik on 2016/4/25.
+ * Created by Eric on 2016/4/25.
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)

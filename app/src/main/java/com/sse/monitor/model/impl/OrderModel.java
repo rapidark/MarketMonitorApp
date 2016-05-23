@@ -10,7 +10,7 @@ import java.util.List;
 import rx.Observable;
 
 /**
- * Created by Maik on 2016/5/16.
+ * Created by Eric on 2016/5/16.
  */
 public class OrderModel implements IOrderModel {
     private static final OrderModel instance = new OrderModel();

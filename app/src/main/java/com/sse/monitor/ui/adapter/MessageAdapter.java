@@ -20,7 +20,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Maik on 2016/5/9.
+ * Created by Eric on 2016/5/9.
  */
 public class MessageAdapter extends FGORecyclerViewAdapter<MessageAdapter.MessageViewHolder> {
     public interface OnItemClickListener {

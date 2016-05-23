@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**
- * Created by Maik on 2016/5/6.
+ * Created by Eric on 2016/5/6.
  */
 public class ContentViewPager extends ViewPager {
     public static boolean GO_TOUTH_CHILD = true;

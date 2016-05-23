@@ -16,7 +16,7 @@ import com.sse.monitor.R;
 import java.util.List;
 
 /**
- * Created by Maik on 2016/2/26.
+ * Created by Eric on 2016/2/26.
  */
 public class PhotoPreviewAdapter extends ViewHolderRecyclingPagerAdapter<PhotoPreviewAdapter.PreviewViewHolder, PhotoInfo> {
     private Activity mActivity;
