@@ -9,7 +9,7 @@ import com.sse.monitor.core.BaseFragment;
 /**
  * Created by Eric on 2016/5/12.
  */
-public class BusinessFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initData(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class BusinessFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_business;
+        return R.layout.fragment_main;
     }
 
     @Override

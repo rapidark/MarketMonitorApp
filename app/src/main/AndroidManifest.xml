@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.MessageDetailActivity"></activity>
+
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@ package com.sse.monitor.logistic;
  * Created by Maik on 2016/4/19.
  */
 public class LogisticApi {
-    public static final String BASE_URL = "http://10.0.3.2:8080/wlms/api/";
+    public static final String BASE_URL = "http://61.152.144.175/wlms/api/";
     public static final String LOGISTIC_DATA_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 
     public static final String SUCCESS_DATA = "00001";

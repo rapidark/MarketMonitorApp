@@ -11,7 +11,7 @@ import com.sse.monitor.di.HasComponent;
 import com.sse.monitor.di.components.DaggerMainComponent;
 import com.sse.monitor.di.components.MainComponent;
 import com.sse.monitor.ui.adapter.MainViewPagerAdapter;
-import com.sse.monitor.ui.fragment.BusinessFragment;
+import com.sse.monitor.ui.fragment.HomeFragment;
 import com.sse.monitor.ui.fragment.CustomerFragment;
 import com.sse.monitor.ui.fragment.ProfileFragment;
 
@@ -63,12 +63,9 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
             public void onPageSelected(int position) {
                 switch (position) {
                     case 0:
-                        rgTab.check(R.id.rb_business);
+                        rgTab.check(R.id.rb_home);
                         break;
                     case 1:
-                        rgTab.check(R.id.rb_customer);
-                        break;
-                    case 2:
                         rgTab.check(R.id.rb_profile);
                         break;
                 }
@@ -84,14 +81,11 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
-                    case R.id.rb_business:
+                    case R.id.rb_home:
                         vpMain.setCurrentItem(0, false);
                         break;
-                    case R.id.rb_customer:
-                        vpMain.setCurrentItem(1, false);
-                        break;
                     case R.id.rb_profile:
-                        vpMain.setCurrentItem(2, false);
+                        vpMain.setCurrentItem(1, false);
                         break;
                 }
             }
@@ -101,11 +95,9 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
     @Override
     protected void initData() {
         fgContent = new ArrayList<>();
-        BusinessFragment businessFragment = new BusinessFragment();
-        CustomerFragment customerFragment = new CustomerFragment();
+        HomeFragment homeFragment = new HomeFragment();
         ProfileFragment profileFragment = new ProfileFragment();
-        fgContent.add(businessFragment);
-        fgContent.add(customerFragment);
+        fgContent.add(homeFragment);
         fgContent.add(profileFragment);
         vpMain.setAdapter(new MainViewPagerAdapter(
                 getSupportFragmentManager(), fgContent));
