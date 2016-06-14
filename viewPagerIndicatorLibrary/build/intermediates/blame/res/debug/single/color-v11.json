@@ -1,39 +1,7 @@
 [
     {
-        "merged": "F:\\AndroidWorkSpace\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "F:\\AndroidWorkSpace\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "D:\\Eric\\AndroidStudioProjects\\MarketMonitorApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
         "source": "D:\\Eric\\AndroidStudioProjects\\MarketMonitorApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "F:\\AndroidWorkSpace\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "F:\\AndroidWorkSpace\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "D:\\Codiy\\asIda\\RamsoApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\Codiy\\asIda\\RamsoApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "D:\\Codiy\\asIda\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "D:\\Codiy\\asIda\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "D:\\Eric\\AndroidStudioProjects\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\Eric\\AndroidStudioProjects\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "D:\\Eric\\AndroidStudioProjects\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "D:\\Eric\\AndroidStudioProjects\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "D:\\Codiy\\asIda\\RamsoApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "D:\\Codiy\\asIda\\RamsoApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "D:\\Codiy\\asIda\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\Codiy\\asIda\\LogisticApp\\viewPagerIndicatorLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
         "merged": "D:\\Eric\\AndroidStudioProjects\\MarketMonitorApp\\viewPagerIndicatorLibrary\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
