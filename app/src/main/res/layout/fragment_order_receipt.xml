@@ -29,6 +29,6 @@
             android:layout_alignParentRight="true"
             android:background="@drawable/bg_login"
             android:text="收单"
-            android:textColor="@color/item_text_white" />
+            android:textColor="@color/white" />
     </RelativeLayout>
 </LinearLayout>

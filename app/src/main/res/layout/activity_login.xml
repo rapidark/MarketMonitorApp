@@ -3,121 +3,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_login_view"
+    android:background="@color/bg_login_gray"
     tools:context=".LoginActivity">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_login_logo" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="@string/login_app_name"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_account"
+        style="@style/LoginEditText"
+        android:layout_below="@id/tv_title"
+        android:hint="帐号/手机号"
+        android:textColorHint="@color/main_gray"/>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@+id/et_account"
+        android:layout_marginLeft="30dp"
+        android:padding="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_account" />
+
+    <EditText
+        android:id="@+id/et_passwd"
+        android:layout_below="@+id/et_account"
+        style="@style/LoginEditText"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:textColorHint="@color/main_gray"/>
+
+    <ImageView
+        android:id="@+id/iv_passwd"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@+id/et_passwd"
+        android:layout_marginLeft="30dp"
+        android:padding="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_passwd" />
+
+    <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/et_passwd"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_frame">
+        android:background="@drawable/btn_flat_blue"
+        android:text="登 陆"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
-        <ImageView
-            android:id="@+id/iv_logo"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_logo" />
-
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/iv_logo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="25dp"
-            android:layout_marginTop="20dp"
-            android:text="行情监测"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/et_account"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/tv_title"
-            android:layout_margin="10dp"
-            android:background="@drawable/bg_account"
-            android:ems="10"
-            android:hint="帐号/手机号"
-            android:paddingLeft="50dp"
-            android:singleLine="true"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/et_account"
-            android:layout_marginLeft="10dp"
-            android:padding="10dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_accout" />
-
-        <EditText
-            android:id="@+id/et_passwd"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@+id/et_account"
-            android:layout_margin="10dp"
-            android:background="@drawable/bg_account"
-            android:ems="10"
-            android:hint="密码"
-            android:inputType="textPassword"
-            android:paddingLeft="50dp"
-            android:singleLine="true"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:id="@+id/iv_passwd"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/et_passwd"
-            android:layout_marginLeft="10dp"
-            android:padding="10dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_passwd" />
-
-        <com.kyleduo.switchbutton.SwitchButton
-            android:id="@+id/sb_remember"
-            style="@style/SwitchButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@id/et_passwd"
-            android:layout_below="@+id/et_passwd"
-            app:kswAnimationDuration="300"
-            app:kswBackDrawable="@drawable/ios_back_drawable"
-            app:kswBackMeasureRatio="1.4"
-            app:kswThumbDrawable="@drawable/ios_thumb"
-            app:kswThumbMarginBottom="-8dp"
-            app:kswThumbMarginLeft="-5dp"
-            app:kswThumbMarginRight="-5dp"
-            app:kswThumbMarginTop="-2.5dp" />
-
-        <TextView
-            android:id="@+id/tv_remember"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/et_passwd"
-            android:layout_marginTop="10dp"
-            android:layout_toLeftOf="@id/sb_remember"
-            android:alpha="0.5"
-            android:text="记住密码" />
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/sb_remember"
-            android:layout_margin="10dp"
-            android:background="@drawable/bg_login"
-            android:text="登 陆"
-            android:textSize="14sp" />
-    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_lost_psw"
+        android:layout_below="@+id/btn_login"
+        android:textSize="14sp"
+        android:layout_alignRight="@+id/btn_login"/>
 
     <RelativeLayout
         android:id="@+id/rl_login"

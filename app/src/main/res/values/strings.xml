@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">行情监测</string>
+    <string name="login_app_name">行 情 监 测</string>
+    <string name="login_lost_psw">忘记密码</string>
 
     <string name="camera_open_notice">您已经开启了灯光！</string>
     <string name="camera_close_notice">您已经关闭了灯光！</string>

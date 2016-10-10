@@ -25,4 +25,10 @@
         <attr name="count" format="integer" />
         <attr name="tryTimes" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="GestureLockPreviewGroup">
+        <attr name="color_no_checked" format="color" />
+        <attr name="color_checked" format="color" />
+        <attr name="count_preview" format="integer" />
+    </declare-styleable>
 </resources>

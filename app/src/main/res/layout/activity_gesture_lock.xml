@@ -10,9 +10,27 @@
     <com.shiki.gesturelock.GestureLockViewGroup
         android:id="@+id/gesturel_gl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         gesture:count = "3"
         gesture:tryTimes = "5"
         />
+
+    <com.shiki.gesturelock.GestureLockPreviewGroup
+        android:layout_below="@+id/gesturel_gl"
+        android:id="@+id/gesturel_glp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        gesture:count = "3"
+        />
+
+    <ImageView
+        android:layout_below="@+id/gesturel_gl"
+        android:id="@+id/gesturel_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/my_clip"
+        android:visibility="gone"/>
 
 </RelativeLayout>

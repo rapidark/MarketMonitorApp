@@ -48,11 +48,11 @@ public class GestureLockViewGroup extends RelativeLayout {
     private List<Integer> mChoose = new ArrayList<Integer>();
 
     /**
-     * 每个GestureLockView中间的间距 设置为：mGestureLockViewWidth * 25%
+     * 每个GestureLockView中间的间距 设置为：mGestureLockViewWidth * 50%
      */
     private int mMarginBetweenLockView = 30;
     /**
-     * GestureLockView的边长 4 * mWidth / ( 5 * mCount + 1 )
+     * GestureLockView的边长 2 * mWidth / ( 3 * mCount + 1 )
      */
     private int mGestureLockViewWidth;
 
@@ -191,11 +191,11 @@ public class GestureLockViewGroup extends RelativeLayout {
         {
             mGestureLockViews = new GestureLockView[mCount*mCount];
             // 计算每个GestureLockView的宽度
-            mGestureLockViewWidth = (int) (4 * mWidth * 1.0f / (5 * mCount + 1));
-            //计算每个GestureLockView的间距
-            mMarginBetweenLockView = (int) (mGestureLockViewWidth * 0.25);
+            mGestureLockViewWidth = (int) (2 * mWidth * 1.0f / (3 * mCount + 1));
+            // 计算每个GestureLockView的间距
+            mMarginBetweenLockView = (int) (mGestureLockViewWidth * 0.5);
             // 设置画笔的宽度为GestureLockView的内圆直径稍微小点（不喜欢的话，随便设）
-            mPaint.setStrokeWidth(mGestureLockViewWidth * 0.29f);
+            mPaint.setStrokeWidth(mGestureLockViewWidth * 0.033f);
             for (int i = 0; i < mGestureLockViews.length; i++)
             {
                 //初始化每个GestureLockView
@@ -259,7 +259,7 @@ public class GestureLockViewGroup extends RelativeLayout {
                 break;
             case MotionEvent.ACTION_MOVE:
                 mPaint.setColor(mFingerOnColor);
-                mPaint.setAlpha(50);
+                //mPaint.setAlpha(50);
                 GestureLockView child = getChildIdByPos(x, y);
                 if (child != null)
                 {
@@ -291,7 +291,7 @@ public class GestureLockViewGroup extends RelativeLayout {
                 break;
             case MotionEvent.ACTION_UP:
                 mPaint.setColor(mFingerUpColor);
-                mPaint.setAlpha(50);
+                //mPaint.setAlpha(50);
                 this.mTryTimes--;
 
                 // 回调是否成功

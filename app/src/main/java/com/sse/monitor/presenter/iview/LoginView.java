@@ -10,8 +10,6 @@ public interface LoginView extends MvpView {
     void setUserCode(String userCode);
     String getPasswd();
     void setPasswd(String passwd);
-    Boolean getRemember();
-    void setRemeber(Boolean isRemeber);
     void showLoginProgress();
     void hideLoginProgress();
     void enterMain();

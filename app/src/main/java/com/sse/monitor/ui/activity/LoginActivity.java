@@ -23,7 +23,6 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Bind(R.id.et_account) EditText etUserCode;
     @Bind(R.id.et_passwd) EditText etPasswd;
-    @Bind(R.id.sb_remember) SwitchButton sbRemember;
     @Bind(R.id.rl_login) RelativeLayout rlProgress;
     LoginPresenter loginPresenter;
 
@@ -75,16 +74,6 @@ public class LoginActivity extends BaseActivity implements LoginView {
     }
 
     @Override
-    public Boolean getRemember() {
-        return sbRemember.isChecked();
-    }
-
-    @Override
-    public void setRemeber(Boolean isRemeber) {
-        this.sbRemember.setChecked(isRemeber);
-    }
-
-    @Override
     public void showLoginProgress() {
         this.rlProgress.setVisibility(View.VISIBLE);
     }
@@ -96,7 +85,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Override
     public void enterMain() {
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        startActivity(new Intent(LoginActivity.this, GestureLockActivity.class));
         finish();
     }
 

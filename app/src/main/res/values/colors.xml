@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#202125</color>
+    <color name="colorPrimaryDark">#202125</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="main_blue">#FF009CFF</color>
+    <color name="main_blue_pressed">#FF0094C5</color>
+    <color name="main_red">#FFFB0000</color>
+    <color name="bg_login_gray">#FFF6F6F6</color>
+
+    <color name="main_gray">#FFCFCFCF</color>
 
     <color name="tab_content">#FF000000</color>
 
@@ -10,5 +17,5 @@
     <color name="item_selectable_pressed">#ff9475CD</color>
 
     <color name="item_text">#FF000000</color>
-    <color name="item_text_white">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>

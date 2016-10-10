@@ -37,7 +37,7 @@ public class GestureLockView extends View {
     /**
      * 画笔的宽度
      */
-    private int mStrokeWidth = 2;
+    private int mStrokeWidth = 4;
 
     /**
      * 圆心坐标
@@ -49,7 +49,7 @@ public class GestureLockView extends View {
      * 内圆的半径 = mInnerCircleRadiusRate * mRadus
      *
      */
-    private float mInnerCircleRadiusRate = 0.3F;
+    private float mInnerCircleRadiusRate = 0.33F;
 
     /**
      * 四个颜色，可由用户自定义，初始化时由GestureLockViewGroup传入

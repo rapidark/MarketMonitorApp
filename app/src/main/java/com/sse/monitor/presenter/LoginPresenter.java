@@ -60,7 +60,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                         LoginPresenter.this.getMvpView().setUserCode(userBean.getUsercode());
                         if (userBean.getIsRemember()) {
                             LoginPresenter.this.getMvpView().setPasswd(userBean.getUserPwd());
-                            LoginPresenter.this.getMvpView().setRemeber(userBean.getIsRemember());
+                            //LoginPresenter.this.getMvpView().setRemeber(userBean.getIsRemember());
                         }
                     }
                 }));
@@ -69,8 +69,9 @@ public class LoginPresenter extends BasePresenter<LoginView> {
     public void login() {
         final String usercode = this.getMvpView().getUserCode();
         final String passwd = MD5Coder.getMD5Code(this.getMvpView().getPasswd());
-        final Boolean isRemember = this.getMvpView().getRemember();
-        this.mCompositeSubscription.add(loginModel.login(usercode, passwd)
+        LoginPresenter.this.getMvpView().enterMain();
+        //final Boolean isRemember = this.getMvpView().getRemember();
+        /*this.mCompositeSubscription.add(loginModel.login(usercode, passwd)
                 .flatMap(new Func1<ResultBean<UserBean>, Observable<String>>() {
                     @Override
                     public Observable<String> call(final ResultBean<UserBean> resultBean) {
@@ -81,7 +82,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                                 @Override
                                 public void call(Subscriber<? super String> subscriber) {
                                     try {
-                                        resultBean.getResultData().setIsRemember(isRemember);
+                                        //resultBean.getResultData().setIsRemember(isRemember);
                                         ReservoirUtils.getInstance().refresh("userInfo", resultBean.getResultData());
                                         subscriber.onNext(null);
                                         subscriber.onCompleted();
@@ -123,6 +124,6 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                             LoginPresenter.this.getMvpView().enterMain();
                         }
                     }
-                }));
+                }));*/
     }
 }
