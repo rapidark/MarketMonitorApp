@@ -11,6 +11,7 @@ import com.sse.monitor.di.components.DaggerApplicationComponent;
 import com.sse.monitor.di.modules.ApplicationModule;
 import com.sse.monitor.di.modules.LogisticApiModule;
 import com.sse.monitor.logistic.LogisticApi;
+import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * Created by Eric on 2016/4/19.
@@ -38,6 +39,7 @@ public class MonitorApplication extends Application {
         initInjector();
         initGson();
         initReservoir();
+        initBugly();
     }
 
     private void initInjector() {
@@ -57,5 +59,9 @@ public class MonitorApplication extends Application {
 
     private void initGson() {
         this.gson = new GsonBuilder().setDateFormat(LogisticApi.LOGISTIC_DATA_FORMAT).create();
+    }
+
+    private void initBugly() {
+        CrashReport.initCrashReport(getApplicationContext());
     }
 }

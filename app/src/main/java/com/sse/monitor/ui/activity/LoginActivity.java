@@ -12,6 +12,7 @@ import com.sse.monitor.R;
 import com.sse.monitor.core.BaseActivity;
 import com.sse.monitor.presenter.LoginPresenter;
 import com.sse.monitor.presenter.iview.LoginView;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import butterknife.Bind;
 import butterknife.OnClick;
