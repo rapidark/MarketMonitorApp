@@ -1,20 +1,15 @@
 package com.sse.monitor.presenter;
 
 import com.anupcowkur.reservoir.Reservoir;
-import com.shiki.utils.ReservoirUtils;
 import com.shiki.utils.coder.MD5Coder;
-import com.sse.monitor.bean.ResultBean;
 import com.sse.monitor.bean.UserBean;
 import com.sse.monitor.core.mvp.BasePresenter;
-import com.sse.monitor.logistic.LogisticApi;
 import com.sse.monitor.model.impl.LoginModel;
 import com.sse.monitor.presenter.iview.LoginView;
 
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action0;
-import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**

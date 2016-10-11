@@ -2,7 +2,7 @@ package com.sse.monitor.model.impl;
 
 import com.sse.monitor.bean.OrderBean;
 import com.sse.monitor.bean.ResultBean;
-import com.sse.monitor.logistic.LogisticMain;
+import com.sse.monitor.mms.LogisticMain;
 import com.sse.monitor.model.IOrderModel;
 
 import java.util.List;

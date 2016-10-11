@@ -8,6 +8,8 @@ import android.widget.RelativeLayout;
 
 import com.sse.monitor.R;
 
+import java.util.List;
+
 /**
  * Created by Eric on 2016/10/10.
  */
@@ -159,7 +161,7 @@ public class GestureLockPreviewGroup extends RelativeLayout {
         }
     }
 
-    /*public void changeItemMode(int[] chose)
+    public void changeItemMode(List<Integer> chose)
     {
         for (GestureLockPreview gestureLockPreview : mGestureLockPreviews)
         {
@@ -168,5 +170,5 @@ public class GestureLockPreviewGroup extends RelativeLayout {
                 gestureLockPreview.setMode(GestureLockPreview.STATUS_CHECKED);
             }
         }
-    }*/
+    }
 }

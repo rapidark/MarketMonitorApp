@@ -11,7 +11,7 @@ import com.sse.monitor.di.HasComponent;
 import com.sse.monitor.di.components.DaggerMessageComponent;
 import com.sse.monitor.di.components.MessageComponent;
 import com.sse.monitor.di.modules.MessageModule;
-import com.sse.monitor.logistic.LogisticApi;
+import com.sse.monitor.mms.LogisticApi;
 import com.sse.monitor.ui.fragment.MessageDetailFragment;
 
 /**

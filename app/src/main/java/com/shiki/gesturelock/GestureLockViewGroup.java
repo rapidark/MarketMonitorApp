@@ -16,6 +16,13 @@ import com.sse.monitor.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.observers.Observers;
+import rx.schedulers.Schedulers;
 
 /**
  * 整体包含n*n个GestureLockView,每个GestureLockView间间隔mMarginBetweenLockView，
@@ -38,10 +45,7 @@ public class GestureLockViewGroup extends RelativeLayout {
      * 每个边上的GestureLockView的个数
      */
     private int mCount = 3;
-    /**
-     * 存储答案
-     */
-    private int[] mAnswer = { 0, 1, 2, 5, 8 };
+
     /**
      * 保存用户选中的GestureLockView的id
      */
@@ -111,21 +115,21 @@ public class GestureLockViewGroup extends RelativeLayout {
         /**
          * 单独选中元素的Id
          *
-         * @param position
+         * @param cId
          */
         public void onBlockSelected(int cId);
 
         /**
-         * 是否匹配
-         *
-         * @param matched
-         */
-        public void onGestureEvent(boolean matched);
-
-        /**
          * 超过尝试次数
          */
-        public void onUnmatchedExceedBoundary();
+        public void onLeftChances(int leftChances);
+
+        /**
+         * 返回手势结果
+         *
+         * @param chose
+         */
+        public void onTotalSelected(List<Integer> chose);
     }
 
     private Paint mPaint;
@@ -297,11 +301,13 @@ public class GestureLockViewGroup extends RelativeLayout {
                 // 回调是否成功
                 if (mOnGestureLockViewListener != null && mChoose.size() > 0)
                 {
-                    mOnGestureLockViewListener.onGestureEvent(checkAnswer());
-                    if (this.mTryTimes == 0)
+                    //mOnGestureLockViewListener.onGestureEvent(checkAnswer());
+                    if (this.mTryTimes >= 0)
                     {
-                        mOnGestureLockViewListener.onUnmatchedExceedBoundary();
+                        mOnGestureLockViewListener.onLeftChances(mTryTimes);
+                        mOnGestureLockViewListener.onTotalSelected(mChoose);
                     }
+
                 }
 
                 Log.e(TAG, "mUnMatchExceedBoundary = " + mTryTimes);
@@ -313,6 +319,14 @@ public class GestureLockViewGroup extends RelativeLayout {
 
                 // 改变子元素的状态为UP
                 changeItemMode();
+                // 1秒后还原
+                Observable.timer(1, TimeUnit.SECONDS).observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<Long>() {
+                    @Override
+                    public void call(Long aLong) {
+                        reset();
+                        invalidate();
+                    }
+                });
 
                 break;
 
@@ -399,7 +413,7 @@ public class GestureLockViewGroup extends RelativeLayout {
      * 检查用户绘制的手势是否正确
      * @return
      */
-    private boolean checkAnswer()
+    /*private boolean checkAnswer()
     {
         if (mAnswer.length != mChoose.size())
             return false;
@@ -411,7 +425,7 @@ public class GestureLockViewGroup extends RelativeLayout {
         }
 
         return true;
-    }
+    }*/
 
     private void changeItemMode()
     {
@@ -422,5 +436,25 @@ public class GestureLockViewGroup extends RelativeLayout {
                 gestureLockView.setMode(GestureLockView.STATUS_FINGER_UP);
             }
         }
+    }
+
+    /**
+     * 设置回调接口
+     *
+     * @param listener
+     */
+    public void setOnGestureLockViewListener(OnGestureLockViewListener listener)
+    {
+        this.mOnGestureLockViewListener = listener;
+    }
+
+    /**
+     * 设置最大实验次数
+     *
+     * @param boundary
+     */
+    public void setUnMatchExceedBoundary(int boundary)
+    {
+        this.mTryTimes = boundary;
     }
 }

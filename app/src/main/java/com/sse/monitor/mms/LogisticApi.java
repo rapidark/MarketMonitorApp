@@ -1,4 +1,4 @@
-package com.sse.monitor.logistic;
+package com.sse.monitor.mms;
 
 /**
  * Created by Eric on 2016/4/19.

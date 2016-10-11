@@ -1,4 +1,4 @@
-package com.sse.monitor.logistic;
+package com.sse.monitor.mms;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.sse.monitor.MonitorApplication;

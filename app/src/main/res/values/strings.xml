@@ -3,6 +3,13 @@
     <string name="login_app_name">行 情 监 测</string>
     <string name="login_lost_psw">忘记密码</string>
 
+    <string name="gesture_lock_prompt">请绘制手势密码</string>
+    <string name="gesture_lock_again">请再次绘制解锁图案</string>
+    <string name="gesture_lock_again_error">与上次绘制不一致，请重新绘制</string>
+    <string name="gesture_lock_login_error">手势密码错误，您还有%1$d次机会</string>
+    <string name="gesture_lock_forget">忘记手势密码?</string>
+    <string name="gesture_lock_change">其他方式登录?</string>
+
     <string name="camera_open_notice">您已经开启了灯光！</string>
     <string name="camera_close_notice">您已经关闭了灯光！</string>
     <string name="camera_problem">抱歉，您相机出现问题。您可能需要重启设备。</string>

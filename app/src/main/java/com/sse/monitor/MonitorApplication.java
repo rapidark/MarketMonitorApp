@@ -10,7 +10,7 @@ import com.sse.monitor.di.components.ApplicationComponent;
 import com.sse.monitor.di.components.DaggerApplicationComponent;
 import com.sse.monitor.di.modules.ApplicationModule;
 import com.sse.monitor.di.modules.LogisticApiModule;
-import com.sse.monitor.logistic.LogisticApi;
+import com.sse.monitor.mms.LogisticApi;
 import com.tencent.bugly.crashreport.CrashReport;
 
 /**

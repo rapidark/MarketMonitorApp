@@ -1,4 +1,4 @@
-package com.sse.monitor.logistic;
+package com.sse.monitor.mms;
 
 import com.squareup.okhttp.ResponseBody;
 import com.sse.monitor.bean.MessageBean;

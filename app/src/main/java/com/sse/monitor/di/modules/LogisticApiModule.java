@@ -1,8 +1,8 @@
 package com.sse.monitor.di.modules;
 
 import com.squareup.okhttp.OkHttpClient;
-import com.sse.monitor.logistic.LogisticApi;
-import com.sse.monitor.logistic.LogisticService;
+import com.sse.monitor.mms.LogisticApi;
+import com.sse.monitor.mms.LogisticService;
 
 import java.util.concurrent.TimeUnit;
 

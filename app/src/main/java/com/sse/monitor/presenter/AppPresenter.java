@@ -4,7 +4,7 @@ import com.orhanobut.logger.Logger;
 import com.sse.monitor.bean.ResultBean;
 import com.sse.monitor.bean.VersionBean;
 import com.sse.monitor.core.mvp.BasePresenter;
-import com.sse.monitor.logistic.LogisticApi;
+import com.sse.monitor.mms.LogisticApi;
 import com.sse.monitor.model.impl.AppModel;
 import com.sse.monitor.presenter.iview.AppView;
 

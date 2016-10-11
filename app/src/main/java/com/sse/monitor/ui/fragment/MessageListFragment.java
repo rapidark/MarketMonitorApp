@@ -11,7 +11,7 @@ import com.sse.monitor.R;
 import com.sse.monitor.bean.MessageBean;
 import com.sse.monitor.core.BaseFragment;
 import com.sse.monitor.di.components.MessageComponent;
-import com.sse.monitor.logistic.LogisticApi;
+import com.sse.monitor.mms.LogisticApi;
 import com.sse.monitor.presenter.MessageListPresenter;
 import com.sse.monitor.presenter.iview.MessageListView;
 import com.sse.monitor.ui.activity.MessageDetailActivity;

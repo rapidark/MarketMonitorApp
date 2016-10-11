@@ -5,32 +5,82 @@
     xmlns:gesture="http://schemas.android.com/apk/res/com.sse.monitor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_login_gray"
     tools:context="com.sse.monitor.ui.activity.GestureLockActivity">
 
-    <com.shiki.gesturelock.GestureLockViewGroup
-        android:id="@+id/gesturel_gl"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/gesture_lock_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        gesture:count = "3"
-        gesture:tryTimes = "5"
-        />
+        android:minHeight="?attr/actionBarSize"
+        android:text="设置手势密码"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
 
     <com.shiki.gesturelock.GestureLockPreviewGroup
-        android:layout_below="@+id/gesturel_gl"
-        android:id="@+id/gesturel_glp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_below="@+id/gesture_lock_title"
+        android:id="@+id/gesture_lock_glp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
         gesture:count = "3"
+        android:background="#e6e8ea"
         />
 
-    <ImageView
+    <TextView
+        android:id="@+id/gesture_lock_prompt"
+        android:layout_below="@+id/gesture_lock_glp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gesture_lock_prompt"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"/>
+
+    <com.shiki.gesturelock.GestureLockViewGroup
+        android:layout_below="@+id/gesture_lock_prompt"
+        android:id="@+id/gesture_lock_gl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        gesture:count = "3"
+        gesture:tryTimes = "5"
+        gesture:color_finger_on="@color/main_blue"
+        gesture:color_finger_up="@color/main_red"
+        />
+
+    <TextView
+        android:id="@+id/gesture_lock_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gesture_lock_gl"
+        android:layout_alignLeft="@+id/gesture_lock_gl"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/main_blue"
+        android:visibility="gone"
+        android:text="@string/gesture_lock_forget"/>
+
+    <TextView
+        android:id="@+id/gesture_lock_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gesture_lock_gl"
+        android:layout_alignRight="@+id/gesture_lock_gl"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/main_blue"
+        android:visibility="gone"
+        android:text="@string/gesture_lock_change"/>
+
+
+
+    <!--<ImageView
         android:layout_below="@+id/gesturel_gl"
         android:id="@+id/gesturel_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/my_clip"
-        android:visibility="gone"/>
+        android:visibility="gone"/>-->
 
 </RelativeLayout>
