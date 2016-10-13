@@ -258,10 +258,12 @@ public class GestureLockViewGroup extends RelativeLayout {
 
         switch (action){
             case MotionEvent.ACTION_DOWN:
+                Log.d(TAG,"MotionEvent.ACTION_DOWN");
                 // 重置
                 reset();
                 break;
             case MotionEvent.ACTION_MOVE:
+                Log.d(TAG,"MotionEvent.ACTION_MOVE");
                 mPaint.setColor(mFingerOnColor);
                 //mPaint.setAlpha(50);
                 GestureLockView child = getChildIdByPos(x, y);
@@ -294,7 +296,7 @@ public class GestureLockViewGroup extends RelativeLayout {
                 mTmpTarget.y = y;
                 break;
             case MotionEvent.ACTION_UP:
-                mPaint.setColor(mFingerUpColor);
+                Log.d(TAG,"MotionEvent.ACTION_UP");
                 //mPaint.setAlpha(50);
                 this.mTryTimes--;
 
@@ -318,7 +320,7 @@ public class GestureLockViewGroup extends RelativeLayout {
                 mTmpTarget.y = mLastPathY;
 
                 // 改变子元素的状态为UP
-                changeItemMode();
+                //changeItemMode();
                 // 1秒后还原
                 Observable.timer(1, TimeUnit.SECONDS).observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<Long>() {
                     @Override
@@ -328,6 +330,9 @@ public class GestureLockViewGroup extends RelativeLayout {
                     }
                 });
 
+                break;
+            default:
+                Log.d(TAG,"MotionEvent.OTHER:"+action);
                 break;
 
         }
@@ -398,7 +403,8 @@ public class GestureLockViewGroup extends RelativeLayout {
     {
 
         //设置了内边距，即x,y必须落入下GestureLockView的内部中间的小区域中，可以通过调整padding使得x,y落入范围不变大，或者不设置padding
-        int padding = (int) (mGestureLockViewWidth * 0.15);
+        //int padding = (int) (mGestureLockViewWidth * 0.15);
+        int padding = 0;
 
         if (x >= child.getLeft() + padding && x <= child.getRight() - padding
                 && y >= child.getTop() + padding
@@ -427,7 +433,7 @@ public class GestureLockViewGroup extends RelativeLayout {
         return true;
     }*/
 
-    private void changeItemMode()
+    public void changeItemMode()
     {
         for (GestureLockView gestureLockView : mGestureLockViews)
         {
@@ -436,6 +442,8 @@ public class GestureLockViewGroup extends RelativeLayout {
                 gestureLockView.setMode(GestureLockView.STATUS_FINGER_UP);
             }
         }
+        mPaint.setColor(mFingerUpColor);
+        invalidate();
     }
 
     /**

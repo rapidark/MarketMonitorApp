@@ -12,7 +12,7 @@
         android:id="@+id/gesture_lock_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
+        android:layout_marginTop="40dp"
         android:text="设置手势密码"
         android:textSize="18sp"
         android:gravity="center"
@@ -24,7 +24,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         gesture:count = "3"
         android:background="#e6e8ea"
         />
@@ -37,8 +37,7 @@
         android:text="@string/gesture_lock_prompt"
         android:textSize="14sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginTop="50dp"/>
 
     <com.shiki.gesturelock.GestureLockViewGroup
         android:layout_below="@+id/gesture_lock_prompt"
@@ -51,7 +50,7 @@
         gesture:color_finger_up="@color/main_red"
         />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/gesture_lock_forget"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
@@ -60,7 +59,7 @@
         android:layout_marginLeft="40dp"
         android:textColor="@color/main_blue"
         android:visibility="gone"
-        android:text="@string/gesture_lock_forget"/>
+        android:text="@string/gesture_lock_forget"/>-->
 
     <TextView
         android:id="@+id/gesture_lock_change"

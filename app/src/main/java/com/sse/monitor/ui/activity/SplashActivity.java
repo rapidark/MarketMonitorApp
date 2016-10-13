@@ -64,7 +64,7 @@ public class SplashActivity extends BaseActivity implements AppView {
        Observable.timer(2, TimeUnit.SECONDS).subscribe(new Action1<Long>() {
             @Override
             public void call(Long aLong) {
-                if(ReservoirUtils.getInstance().contains(MmsConstants.ACCOUNT)){
+                if(ReservoirUtils.getInstance().contains(MmsConstants.ACCOUNT)&&ReservoirUtils.getInstance().contains(MmsConstants.GESTRUE)){
                     enterGesture(false);
                 }else{
                     enterLogin();

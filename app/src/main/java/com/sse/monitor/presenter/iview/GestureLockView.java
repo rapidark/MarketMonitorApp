@@ -14,5 +14,5 @@ public interface GestureLockView extends MvpView {
     void gestureLockPreviewChange(List<Integer> chose);
     void updatePrompt(int status);
     void enterMain();
-
+    void enterLogin(boolean isBackToGesture);
 }
