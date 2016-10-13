@@ -13,4 +13,5 @@ public interface LoginView extends MvpView {
     void showLoginProgress();
     void hideLoginProgress();
     void enterMain();
+    void enterGestrue();
 }

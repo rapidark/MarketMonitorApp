@@ -1,5 +1,6 @@
 package com.sse.monitor.ui.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,8 +9,10 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.kyleduo.switchbutton.SwitchButton;
+import com.shiki.utils.ReservoirUtils;
 import com.sse.monitor.R;
 import com.sse.monitor.core.BaseActivity;
+import com.sse.monitor.mms.MmsConstants;
 import com.sse.monitor.presenter.LoginPresenter;
 import com.sse.monitor.presenter.iview.LoginView;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -26,6 +29,14 @@ public class LoginActivity extends BaseActivity implements LoginView {
     @Bind(R.id.et_passwd) EditText etPasswd;
     @Bind(R.id.rl_login) RelativeLayout rlProgress;
     LoginPresenter loginPresenter;
+
+    boolean mIsBackToGesture;
+
+    public static Intent getCallingIntent(Context context, boolean isBackToGesture) {
+        Intent callingIntent = new Intent(context, LoginActivity.class);
+        callingIntent.putExtra(MmsConstants.BACK_TO_GESTRUE,isBackToGesture);
+        return callingIntent;
+    }
 
     @Override
     protected int getLayoutId() {
@@ -44,9 +55,10 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Override
     protected void initData() {
+        mIsBackToGesture = getIntent().getBooleanExtra(MmsConstants.BACK_TO_GESTRUE,false);
         this.loginPresenter = new LoginPresenter();
         this.loginPresenter.attachView(this);
-        this.loginPresenter.showUserAndPasswd();
+        this.loginPresenter.showUser();
     }
 
     @OnClick(R.id.btn_login)
@@ -62,6 +74,8 @@ public class LoginActivity extends BaseActivity implements LoginView {
     @Override
     public void setUserCode(String userCode) {
         this.etUserCode.setText(userCode);
+        this.etUserCode.setSelection(userCode.length());
+
     }
 
     @Override
@@ -86,8 +100,24 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Override
     public void enterMain() {
-        startActivity(new Intent(LoginActivity.this, GestureLockActivity.class));
+        startActivity(new Intent(LoginActivity.this,MainActivity.class));
         finish();
+    }
+
+    @Override
+    public void enterGestrue() {
+        startActivity(GestureLockActivity.getCallingIntent(LoginActivity.this,!ReservoirUtils.getInstance().contains(MmsConstants.GESTRUE)));
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(mIsBackToGesture){
+            enterGestrue();
+        }else{
+            finish();
+        }
+        //super.onBackPressed();
     }
 
     @Override

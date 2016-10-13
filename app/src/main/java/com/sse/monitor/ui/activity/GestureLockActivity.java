@@ -1,5 +1,6 @@
 package com.sse.monitor.ui.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,9 +19,9 @@ import com.sse.monitor.presenter.iview.GestureLockView;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class GestureLockActivity extends BaseActivity implements GestureLockView,GestureLockViewGroup.OnGestureLockViewListener {
+public class GestureLockActivity extends BaseActivity implements GestureLockView, GestureLockViewGroup.OnGestureLockViewListener {
     private static final String TAG = "GestureLockActivity";
 
     @Bind(R.id.gesture_lock_title)
@@ -40,6 +41,15 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
     int mLeftChanges;
     String mFirstGesture;
 
+    public static Intent getCallingIntent(Context context, boolean isSetGesture) {
+        Intent callingIntent = new Intent(context, GestureLockActivity.class);
+        if(isSetGesture){
+            callingIntent.putExtra(MmsConstants.GestureLock.STATUS,MmsConstants.GestureLock.SET_GESTURE);
+        }else{
+            callingIntent.putExtra(MmsConstants.GestureLock.STATUS,MmsConstants.GestureLock.LOGIN);
+        }
+        return callingIntent;
+    }
 
 
     @Override
@@ -60,12 +70,18 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
     @Override
     protected void initData() {
         mCurrentStatus = getIntent().getIntExtra(MmsConstants.GestureLock.STATUS, MmsConstants.GestureLock.SET_GESTURE);
-        switch (mCurrentStatus){
+        switch (mCurrentStatus) {
             case MmsConstants.GestureLock.LOGIN:
                 showForgetAndChange();
+                mGesturelockGl.setUnMatchExceedBoundary(5);
+                mGesturelockTitle.setText(getResources().getText(R.string.gesture_lock_login));
+                mGesturelockPrompt.setText(getResources().getText(R.string.gesture_lock_login));
                 break;
             default:
                 hideForgetAndChange();
+                mGesturelockTitle.setText(getResources().getText(R.string.gesture_lock_prompt));
+                mGesturelockPrompt.setText(getResources().getText(R.string.gesture_lock_prompt));
+                mGesturelockGl.setUnMatchExceedBoundary(0);
                 break;
 
         }
@@ -83,12 +99,12 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
 
     @Override
     public void onTotalSelected(List<Integer> chose) {
-        Log.d(TAG, "chose" + chose.size());
         String gesture = "";
         for (Integer i : chose) {
             gesture += i;
         }
-        switch (mCurrentStatus){
+        Log.d(TAG, "gesture:" + gesture);
+        switch (mCurrentStatus) {
             case MmsConstants.GestureLock.SET_GESTURE:
             case MmsConstants.GestureLock.SET_GESTURE_AGAIN_ERROR:
                 mCurrentStatus = MmsConstants.GestureLock.SET_GESTURE_AGAIN;
@@ -100,10 +116,10 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
                 mFirstGesture = gesture;
                 break;
             case MmsConstants.GestureLock.SET_GESTURE_AGAIN:
-                if(mFirstGesture.equals(gesture)){
-                    ReservoirUtils.getInstance().refresh("gesture",gesture);
+                if (mFirstGesture.equals(gesture)) {
+                    ReservoirUtils.getInstance().refresh(MmsConstants.GESTRUE, gesture);
                     enterMain();
-                }else{
+                } else {
                     mCurrentStatus = MmsConstants.GestureLock.SET_GESTURE_AGAIN_ERROR;
                     updatePrompt(mCurrentStatus);
                     gestureLockPreviewReset();
@@ -111,13 +127,19 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
                 break;
             case MmsConstants.GestureLock.LOGIN:
             case MmsConstants.GestureLock.LOGIN_ERROR:
-                String str = String.valueOf(ReservoirUtils.getInstance().get("gesture",String.class));
-                if(gesture.equals(str)){
-                    enterMain();
-                }else{
-                    mCurrentStatus = MmsConstants.GestureLock.LOGIN_ERROR;
-                    updatePrompt(mCurrentStatus);
+                String str = null;
+                try {
+                    str = Reservoir.get(MmsConstants.GESTRUE, String.class);
+                    if (gesture.equals(str)) {
+                        enterMain();
+                    } else {
+                        mCurrentStatus = MmsConstants.GestureLock.LOGIN_ERROR;
+                        updatePrompt(mCurrentStatus);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+
                 break;
         }
 
@@ -147,9 +169,8 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
 
     @Override
     public void updatePrompt(int status) {
-        switch (status){
+        switch (status) {
             case MmsConstants.GestureLock.SET_GESTURE:
-            case MmsConstants.GestureLock.LOGIN:
                 mGesturelockPrompt.setText(getResources().getText(R.string.gesture_lock_prompt));
                 mGesturelockPrompt.setTextColor(getResources().getColor(R.color.black));
                 break;
@@ -165,6 +186,10 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
                 mGesturelockPrompt.setText(String.format(getResources().getString(R.string.gesture_lock_login_error), mLeftChanges));
                 mGesturelockPrompt.setTextColor(getResources().getColor(R.color.red));
                 break;
+            case MmsConstants.GestureLock.LOGIN:
+                mGesturelockPrompt.setText(getResources().getText(R.string.gesture_lock_login));
+                mGesturelockPrompt.setTextColor(getResources().getColor(R.color.black));
+                break;
         }
     }
 
@@ -177,5 +202,17 @@ public class GestureLockActivity extends BaseActivity implements GestureLockView
     @Override
     public void onFailure(String msg) {
 
+    }
+
+    @OnClick({R.id.gesture_lock_forget, R.id.gesture_lock_change})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.gesture_lock_forget:
+                break;
+            case R.id.gesture_lock_change:
+                startActivity(LoginActivity.getCallingIntent(GestureLockActivity.this,true));
+                finish();
+                break;
+        }
     }
 }

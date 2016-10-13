@@ -54,7 +54,7 @@
     <TextView
         android:id="@+id/gesture_lock_forget"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@+id/gesture_lock_gl"
         android:layout_alignLeft="@+id/gesture_lock_gl"
         android:layout_marginLeft="40dp"
@@ -65,22 +65,12 @@
     <TextView
         android:id="@+id/gesture_lock_change"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@+id/gesture_lock_gl"
         android:layout_alignRight="@+id/gesture_lock_gl"
         android:layout_marginRight="40dp"
         android:textColor="@color/main_blue"
         android:visibility="gone"
         android:text="@string/gesture_lock_change"/>
-
-
-
-    <!--<ImageView
-        android:layout_below="@+id/gesturel_gl"
-        android:id="@+id/gesturel_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/my_clip"
-        android:visibility="gone"/>-->
 
 </RelativeLayout>

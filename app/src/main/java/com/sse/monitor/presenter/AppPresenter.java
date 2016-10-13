@@ -26,7 +26,7 @@ public class AppPresenter extends BasePresenter<AppView> {
         this.appModel = AppModel.getInstance();
     }
 
-    public void checkUpdate() {
+    /*public void checkUpdate() {
         this.mCompositeSubscription.add(Observable.timer(2, TimeUnit.SECONDS)
                 .flatMap(new Func1<Long, Observable<ResultBean<VersionBean>>>() {
                     @Override
@@ -63,7 +63,7 @@ public class AppPresenter extends BasePresenter<AppView> {
                         }
                     }
                 }));
-    }
+    }*/
 
     public void downloadAPK() {
 

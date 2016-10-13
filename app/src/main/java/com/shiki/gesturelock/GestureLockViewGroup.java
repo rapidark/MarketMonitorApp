@@ -305,8 +305,8 @@ public class GestureLockViewGroup extends RelativeLayout {
                     if (this.mTryTimes >= 0)
                     {
                         mOnGestureLockViewListener.onLeftChances(mTryTimes);
-                        mOnGestureLockViewListener.onTotalSelected(mChoose);
                     }
+                    mOnGestureLockViewListener.onTotalSelected(mChoose);
 
                 }
 

@@ -1,15 +1,19 @@
 package com.sse.monitor.presenter;
 
 import com.anupcowkur.reservoir.Reservoir;
+import com.shiki.utils.ReservoirUtils;
 import com.shiki.utils.coder.MD5Coder;
 import com.sse.monitor.bean.UserBean;
 import com.sse.monitor.core.mvp.BasePresenter;
+import com.sse.monitor.mms.MmsConstants;
 import com.sse.monitor.model.impl.LoginModel;
 import com.sse.monitor.presenter.iview.LoginView;
 
 import rx.Observable;
 import rx.Subscriber;
+import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -22,15 +26,15 @@ public class LoginPresenter extends BasePresenter<LoginView> {
         this.loginModel = LoginModel.getInstance();
     }
 
-    public void showUserAndPasswd() {
+    public void showUser() {
         this.mCompositeSubscription.add(Observable.create(
-                new Observable.OnSubscribe<UserBean>() {
+                new Observable.OnSubscribe<String>() {
                     @Override
-                    public void call(Subscriber<? super UserBean> subscriber) {
+                    public void call(Subscriber<? super String> subscriber) {
                         try {
-                            if (Reservoir.contains("userInfo")) {
-                                UserBean userBean = Reservoir.get("userInfo", UserBean.class);
-                                subscriber.onNext(userBean);
+                            if (Reservoir.contains(MmsConstants.ACCOUNT)) {
+                                String account = String.valueOf(Reservoir.get(MmsConstants.ACCOUNT, String.class));
+                                subscriber.onNext(account);
                             }
                             subscriber.onCompleted();
                         } catch (Exception e) {
@@ -40,7 +44,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                 })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<UserBean>() {
+                .subscribe(new Subscriber<String>() {
                     @Override
                     public void onCompleted() {
                         LoginPresenter.this.mCompositeSubscription.remove(this);
@@ -51,20 +55,29 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                     }
 
                     @Override
-                    public void onNext(UserBean userBean) {
-                        LoginPresenter.this.getMvpView().setUserCode(userBean.getUsercode());
-                        if (userBean.getIsRemember()) {
-                            LoginPresenter.this.getMvpView().setPasswd(userBean.getUserPwd());
-                            //LoginPresenter.this.getMvpView().setRemeber(userBean.getIsRemember());
-                        }
+                    public void onNext(String account) {
+                        LoginPresenter.this.getMvpView().setUserCode(account);
                     }
                 }));
     }
 
     public void login() {
         final String usercode = this.getMvpView().getUserCode();
-        final String passwd = MD5Coder.getMD5Code(this.getMvpView().getPasswd());
-        LoginPresenter.this.getMvpView().enterMain();
+        final String passwd = this.getMvpView().getPasswd();
+        //final String passwd = MD5Coder.getMD5Code(this.getMvpView().getPasswd());
+        if(usercode.equals("admin")&&passwd.equals("123456")){
+            ReservoirUtils.getInstance().refresh(MmsConstants.ACCOUNT,usercode);
+            if(ReservoirUtils.getInstance().contains(MmsConstants.GESTRUE)){
+                LoginPresenter.this.getMvpView().enterMain();
+            }else{
+                LoginPresenter.this.getMvpView().enterGestrue();
+            }
+
+        }else{
+            LoginPresenter.this.getMvpView().hideLoginProgress();
+            LoginPresenter.this.getMvpView().onFailure("用户名密码错误");
+        }
+
         //final Boolean isRemember = this.getMvpView().getRemember();
         /*this.mCompositeSubscription.add(loginModel.login(usercode, passwd)
                 .flatMap(new Func1<ResultBean<UserBean>, Observable<String>>() {

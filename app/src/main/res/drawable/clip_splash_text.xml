@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <clip xmlns:android="http://schemas.android.com/apk/res/android"
-      android:drawable="@drawable/splash_text"
+      android:drawable="@drawable/ic_splash_text"
       android:clipOrientation="horizontal"
       android:gravity="left">
 </clip>
