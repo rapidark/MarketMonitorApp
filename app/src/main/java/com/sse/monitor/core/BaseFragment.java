@@ -3,6 +3,7 @@ package com.sse.monitor.core;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import com.sse.monitor.di.HasComponent;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Eric on 2016/5/6.
@@ -18,6 +20,8 @@ public abstract class BaseFragment extends Fragment {
     protected View self;
     private boolean isVisible;
     private boolean isPrepared;
+    private Unbinder unbinder;
+    private static final String TAG = "BaseFragment";
 
     @Nullable
     @Override
@@ -30,7 +34,7 @@ public abstract class BaseFragment extends Fragment {
             ViewGroup parent = (ViewGroup) this.self.getParent();
             parent.removeView(this.self);
         }
-        ButterKnife.bind(this, this.self);
+        unbinder = ButterKnife.bind(this, this.self);
         this.initViews(this.self, savedInstanceState);
         this.initData(savedInstanceState);
         this.initListeners();
@@ -56,6 +60,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected void lazyLoad() {
         //Logger.d(isPrepared + "," + isVisible);
+        //Log.d(TAG,isPrepared + "," + isVisible);
         if (!isPrepared || !isVisible) {
             return;
         }
@@ -81,7 +86,8 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+        unbinder.unbind();
+        //ButterKnife.unbind(this);
     }
 
     @SuppressWarnings("unchecked")

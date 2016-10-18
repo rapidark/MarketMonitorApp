@@ -16,8 +16,7 @@ import com.sse.monitor.presenter.iview.AppView;
 
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
+import butterknife.BindView;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
@@ -26,10 +25,10 @@ import rx.functions.Action1;
  * Created by Eric on 2016/5/3.
  */
 public class SplashActivity extends BaseActivity implements AppView {
-    @Bind(R.id.rl_root)
+    @BindView(R.id.rl_root)
     RelativeLayout rlRoot;
     AppPresenter appPresenter;
-    @Bind(R.id.splash_iv_text)
+    @BindView(R.id.splash_iv_text)
     ImageView mSplashIvText;
 
     @Override

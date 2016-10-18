@@ -8,16 +8,14 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.kyleduo.switchbutton.SwitchButton;
 import com.shiki.utils.ReservoirUtils;
 import com.sse.monitor.R;
 import com.sse.monitor.core.BaseActivity;
 import com.sse.monitor.mms.MmsConstants;
 import com.sse.monitor.presenter.LoginPresenter;
 import com.sse.monitor.presenter.iview.LoginView;
-import com.tencent.bugly.crashreport.CrashReport;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -25,9 +23,9 @@ import butterknife.OnClick;
  */
 public class LoginActivity extends BaseActivity implements LoginView {
 
-    @Bind(R.id.et_account) EditText etUserCode;
-    @Bind(R.id.et_passwd) EditText etPasswd;
-    @Bind(R.id.rl_login) RelativeLayout rlProgress;
+    @BindView(R.id.et_account) EditText etUserCode;
+    @BindView(R.id.et_passwd) EditText etPasswd;
+    @BindView(R.id.rl_login) RelativeLayout rlProgress;
     LoginPresenter loginPresenter;
 
     boolean mIsBackToGesture;

@@ -21,16 +21,22 @@
         <RadioButton
             android:id="@+id/rb_home"
             style="@style/MainRadioButton"
+            android:drawableTop="@drawable/selector_home"
+            android:paddingTop="8dp"
             android:text="首页" />
 
         <RadioButton
             android:id="@+id/rb_market"
             style="@style/MainRadioButton"
+            android:drawableTop="@drawable/selector_market"
+            android:paddingTop="8dp"
             android:text="行情" />
 
         <RadioButton
             android:id="@+id/rb_profile"
             style="@style/MainRadioButton"
+            android:drawableTop="@drawable/selector_profile"
+            android:paddingTop="8dp"
             android:text="我" />
     </RadioGroup>
 </LinearLayout>

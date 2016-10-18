@@ -15,7 +15,7 @@ import com.sse.monitor.presenter.iview.MessageDetailView;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Eric on 2016/5/12.
@@ -23,9 +23,9 @@ import butterknife.Bind;
 public class MessageDetailFragment extends BaseFragment implements MessageDetailView {
     @Inject
     MessageDetailPresenter messageDetailPresenter;
-    @Bind(R.id.tv_msgTitle) TextView tvMsgTitle;
-    @Bind(R.id.tv_msgSubTitle) TextView tvMsgSubTitle;
-    @Bind(R.id.wv_msgContent) WebView wvMsgContent;
+    @BindView(R.id.tv_msgTitle) TextView tvMsgTitle;
+    @BindView(R.id.tv_msgSubTitle) TextView tvMsgSubTitle;
+    @BindView(R.id.wv_msgContent) WebView wvMsgContent;
 
 
     @Override

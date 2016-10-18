@@ -21,13 +21,13 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Eric on 2016/5/9.
  */
 public class MessageListFragment extends BaseFragment implements MessageListView {
-    @Bind(R.id.fgo_recycler_view)
+    @BindView(R.id.fgo_recycler_view)
     FGORecyclerView rvAnnouncement;
     @Inject
     MessageAdapter messageAdapter;

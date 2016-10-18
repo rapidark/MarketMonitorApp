@@ -20,23 +20,23 @@ import com.sse.monitor.presenter.iview.GestureLockView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class GestureLockActivity extends BaseActivity implements GestureLockView, GestureLockViewGroup.OnGestureLockViewListener {
     private static final String TAG = "GestureLockActivity";
 
-    @Bind(R.id.gesture_lock_title)
+    @BindView(R.id.gesture_lock_title)
     TextView mGesturelockTitle;
-    @Bind(R.id.gesture_lock_glp)
+    @BindView(R.id.gesture_lock_glp)
     GestureLockPreviewGroup mGesturelockGlp;
-    @Bind(R.id.gesture_lock_prompt)
+    @BindView(R.id.gesture_lock_prompt)
     TextView mGesturelockPrompt;
-    @Bind(R.id.gesture_lock_gl)
+    @BindView(R.id.gesture_lock_gl)
     GestureLockViewGroup mGesturelockGl;
     /*@Bind(R.id.gesture_lock_forget)
     TextView mGesturelockForget;*/
-    @Bind(R.id.gesture_lock_change)
+    @BindView(R.id.gesture_lock_change)
     TextView mGesturelockChange;
 
     int mCurrentStatus;

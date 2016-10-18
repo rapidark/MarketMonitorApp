@@ -18,16 +18,16 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnCheckedChanged;
 
 /**
  * Created by Eric on 2016/5/16.
  */
 public class OrderReceiptFragment extends BaseFragment implements OrderReceiptView {
-    @Bind(R.id.fgo_recycler_view)
+    @BindView(R.id.fgo_recycler_view)
     FGORecyclerView rvReceipt;
-    @Bind(R.id.chk_allcheck)
+    @BindView(R.id.chk_allcheck)
     CheckBox chkAllCheck;
     @Inject
     OrderReceiptAdapter orderReceiptAdapter;

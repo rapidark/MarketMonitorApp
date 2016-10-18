@@ -17,7 +17,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -95,14 +95,14 @@ public class OrderReceiptAdapter extends FGORecyclerViewAdapter<OrderReceiptAdap
     }
 
     static class ReceiptViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tv_logisticCode) TextView tvLogisticCode;
-        @Bind(R.id.tv_ordCode) TextView tvOrdCode;
-        @Bind(R.id.tv_deliveryCode) TextView tvDeliveryCode;
-        @Bind(R.id.tv_deliveryAddr) TextView tvDeliveryAddr;
-        @Bind(R.id.tv_recipient) TextView tvRecipient;
-        @Bind(R.id.tv_ordTel) TextView tvOrdTel;
-        @Bind(R.id.tv_exprItem) TextView tvExprItem;
-        @Bind(R.id.chk_selected) CheckBox chkSelected;
+        @BindView(R.id.tv_logisticCode) TextView tvLogisticCode;
+        @BindView(R.id.tv_ordCode) TextView tvOrdCode;
+        @BindView(R.id.tv_deliveryCode) TextView tvDeliveryCode;
+        @BindView(R.id.tv_deliveryAddr) TextView tvDeliveryAddr;
+        @BindView(R.id.tv_recipient) TextView tvRecipient;
+        @BindView(R.id.tv_ordTel) TextView tvOrdTel;
+        @BindView(R.id.tv_exprItem) TextView tvExprItem;
+        @BindView(R.id.chk_selected) CheckBox chkSelected;
 
         public ReceiptViewHolder(View itemView) {
             super(itemView);

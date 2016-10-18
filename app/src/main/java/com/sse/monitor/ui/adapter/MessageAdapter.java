@@ -16,7 +16,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -98,11 +98,11 @@ public class MessageAdapter extends FGORecyclerViewAdapter<MessageAdapter.Messag
     }
 
     static class MessageViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tv_msgDate) TextView tvMsgDate;
-        @Bind(R.id.tv_msgUser) TextView tvMsgUser;
-        @Bind(R.id.tv_msgTitle) TextView tvMsgTitle;
-        @Bind(R.id.tv_msgContent) TextView tvMsgContent;
-        @Bind(R.id.tv_MsgFlag) TextView tvMsgFlag;
+        @BindView(R.id.tv_msgDate) TextView tvMsgDate;
+        @BindView(R.id.tv_msgUser) TextView tvMsgUser;
+        @BindView(R.id.tv_msgTitle) TextView tvMsgTitle;
+        @BindView(R.id.tv_msgContent) TextView tvMsgContent;
+        @BindView(R.id.tv_MsgFlag) TextView tvMsgFlag;
 
         public MessageViewHolder(View itemView) {
             super(itemView);

@@ -12,21 +12,20 @@ import com.sse.monitor.di.components.DaggerMainComponent;
 import com.sse.monitor.di.components.MainComponent;
 import com.sse.monitor.ui.adapter.MainViewPagerAdapter;
 import com.sse.monitor.ui.fragment.HomeFragment;
-import com.sse.monitor.ui.fragment.CustomerFragment;
 import com.sse.monitor.ui.fragment.MarketFragment;
 import com.sse.monitor.ui.fragment.ProfileFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Eric on 2016/5/5.
  */
 public class MainActivity extends BaseActivity implements HasComponent<MainComponent> {
-    @Bind(R.id.vp_main) ViewPager vpMain;
-    @Bind(R.id.rg_tabbar) RadioGroup rgTab;
+    @BindView(R.id.vp_main) ViewPager vpMain;
+    @BindView(R.id.rg_tabbar) RadioGroup rgTab;
     private List<Fragment> fgContent;
     private MainComponent mainComponent;
 
@@ -111,6 +110,7 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
         vpMain.setAdapter(new MainViewPagerAdapter(
                 getSupportFragmentManager(), fgContent));
         vpMain.setCurrentItem(0);
+        rgTab.check(R.id.rb_home);
     }
 
     @Override
