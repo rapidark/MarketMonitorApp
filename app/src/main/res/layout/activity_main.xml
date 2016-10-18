@@ -15,52 +15,22 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
 
         <RadioButton
             android:id="@+id/rb_home"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:button="@null"
-            android:checked="true"
-            android:ellipsize="marquee"
-            android:gravity="center"
-            android:paddingTop="0dp"
-            android:singleLine="true"
-            android:text="首页"
-            android:textColor="@color/tab_content"
-            android:textSize="12dp" />
+            style="@style/MainRadioButton"
+            android:text="首页" />
 
-        <!--<RadioButton
-            android:id="@+id/rb_customer"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:button="@null"
-            android:ellipsize="marquee"
-            android:gravity="center"
-            android:paddingTop="0dp"
-            android:singleLine="true"
-            android:text="配送"
-            android:textColor="@color/tab_content"
-            android:textSize="12dp" />-->
+        <RadioButton
+            android:id="@+id/rb_market"
+            style="@style/MainRadioButton"
+            android:text="行情" />
 
         <RadioButton
             android:id="@+id/rb_profile"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:button="@null"
-            android:ellipsize="marquee"
-            android:gravity="center"
-            android:paddingTop="0dp"
-            android:singleLine="true"
-            android:text="我"
-            android:textColor="@color/tab_content"
-            android:textSize="12dp" />
+            style="@style/MainRadioButton"
+            android:text="我" />
     </RadioGroup>
 </LinearLayout>

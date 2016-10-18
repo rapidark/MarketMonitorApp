@@ -12,19 +12,19 @@ import retrofit.RxJavaCallAdapterFactory;
 /**
  * Created by Eric on 2016/4/28.
  */
-public class LogisticMain {
-    private static LogisticMain instance;
+public class MmsMain {
+    private static MmsMain instance;
 
-    private LogisticService logisticService;
+    private MmsService mMmsService;
 
 
-    public static LogisticMain getInstance() {
-        if (instance == null) instance = new LogisticMain();
+    public static MmsMain getInstance() {
+        if (instance == null) instance = new MmsMain();
         return instance;
     }
 
 
-    private LogisticMain() {
+    private MmsMain() {
         OkHttpClient okHttpClient = new OkHttpClient();
         okHttpClient.setReadTimeout(7000, TimeUnit.MILLISECONDS);
 
@@ -35,17 +35,17 @@ public class LogisticMain {
             okHttpClient.interceptors().add(new LoggingInterceptor());
         }
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(LogisticApi.BASE_URL)
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(MmsApi.BASE_URL)
                 .addCallAdapterFactory(
                         RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(
                         MonitorApplication.getInstance().gson))
                 .client(okHttpClient)
                 .build();
-        this.logisticService = retrofit.create(LogisticService.class);
+        this.mMmsService = retrofit.create(MmsService.class);
     }
 
-    public LogisticService getLogisticService() {
-        return logisticService;
+    public MmsService getMmsService() {
+        return mMmsService;
     }
 }

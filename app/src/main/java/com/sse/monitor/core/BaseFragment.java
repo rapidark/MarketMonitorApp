@@ -16,6 +16,8 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends Fragment {
     protected View self;
+    private boolean isVisible;
+    private boolean isPrepared;
 
     @Nullable
     @Override
@@ -33,6 +35,34 @@ public abstract class BaseFragment extends Fragment {
         this.initData(savedInstanceState);
         this.initListeners();
         return this.self;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        isPrepared = true;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (getUserVisibleHint()) {
+            isVisible = true;
+            lazyLoad();
+        } else {
+            isVisible = false;
+        }
+    }
+
+    protected void lazyLoad() {
+        //Logger.d(isPrepared + "," + isVisible);
+        if (!isPrepared || !isVisible) {
+            return;
+        }
+        lazyData();
+    }
+
+    protected void lazyData() {
     }
 
     protected abstract void initData(Bundle savedInstanceState);

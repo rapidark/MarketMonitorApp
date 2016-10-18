@@ -4,6 +4,7 @@ import com.sse.monitor.di.PerActivity;
 import com.sse.monitor.di.modules.ActivityModule;
 import com.sse.monitor.ui.fragment.HomeFragment;
 import com.sse.monitor.ui.fragment.CustomerFragment;
+import com.sse.monitor.ui.fragment.MarketFragment;
 import com.sse.monitor.ui.fragment.ProfileFragment;
 
 import dagger.Component;
@@ -16,5 +17,5 @@ import dagger.Component;
 public interface MainComponent extends ActivityComponent {
     void inject(ProfileFragment profileFragment);
     void inject(HomeFragment homeFragment);
-    void inject(CustomerFragment customerFragment);
+    void inject(MarketFragment marketFragment);
 }

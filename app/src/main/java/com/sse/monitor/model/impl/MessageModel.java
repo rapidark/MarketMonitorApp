@@ -2,7 +2,7 @@ package com.sse.monitor.model.impl;
 
 import com.sse.monitor.bean.MessageBean;
 import com.sse.monitor.bean.ResultBean;
-import com.sse.monitor.mms.LogisticMain;
+import com.sse.monitor.mms.MmsMain;
 import com.sse.monitor.model.IMessageModel;
 
 import java.util.List;
@@ -25,11 +25,11 @@ public class MessageModel implements IMessageModel {
 
     @Override
     public Observable<ResultBean<List<MessageBean>>> getMessageList(String expressId) {
-        return LogisticMain.getInstance().getLogisticService().getMessageList(expressId);
+        return MmsMain.getInstance().getMmsService().getMessageList(expressId);
     }
 
     @Override
     public Observable<ResultBean<MessageBean>> getMessageDetail(String expressId, String messageId) {
-        return LogisticMain.getInstance().getLogisticService().getMessageDetail(expressId, messageId);
+        return MmsMain.getInstance().getMmsService().getMessageDetail(expressId, messageId);
     }
 }

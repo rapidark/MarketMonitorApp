@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_item_market"
+                android:rowCount="3"
+                android:columnCount="2">
+    <TextView
+        android:id="@+id/item_market_tv_title"
+        android:layout_rowWeight="20"
+        android:text="上证指数"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:gravity="center_horizontal|bottom"
+        android:layout_marginBottom="-5dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/item_market_tv_index"
+        android:layout_rowWeight="1"
+        android:layout_gravity="fill"
+        android:text="3051.54"
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_columnSpan="2"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/item_market_tv_update"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="20"
+        android:layout_marginRight="5dp"
+        android:text="-6.28"
+        android:gravity="top|right"
+        android:layout_marginTop="-5dp"
+        android:textColor="@color/green"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/item_market_tv_percent"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="20"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="-5dp"
+        android:text="-0.19%"
+        android:textColor="@color/green"
+        android:textSize="12sp"/>
+
+
+
+
+</GridLayout>

@@ -2,7 +2,7 @@ package com.sse.monitor.model.impl;
 
 import com.sse.monitor.bean.OrderBean;
 import com.sse.monitor.bean.ResultBean;
-import com.sse.monitor.mms.LogisticMain;
+import com.sse.monitor.mms.MmsMain;
 import com.sse.monitor.model.IOrderModel;
 
 import java.util.List;
@@ -24,6 +24,6 @@ public class OrderModel implements IOrderModel {
 
     @Override
     public Observable<ResultBean<List<OrderBean>>> receiptOrderList(String expressId) {
-        return LogisticMain.getInstance().getLogisticService().receiptOrderList(expressId);
+        return MmsMain.getInstance().getMmsService().receiptOrderList(expressId);
     }
 }

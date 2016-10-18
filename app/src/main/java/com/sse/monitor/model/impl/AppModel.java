@@ -2,7 +2,7 @@ package com.sse.monitor.model.impl;
 
 import com.sse.monitor.bean.ResultBean;
 import com.sse.monitor.bean.VersionBean;
-import com.sse.monitor.mms.LogisticMain;
+import com.sse.monitor.mms.MmsMain;
 import com.sse.monitor.model.IAppModel;
 
 import com.squareup.okhttp.ResponseBody;
@@ -25,11 +25,11 @@ public class AppModel implements IAppModel {
 
     @Override
     public Observable<ResultBean<VersionBean>> getVersion() {
-        return LogisticMain.getInstance().getLogisticService().getVersion();
+        return MmsMain.getInstance().getMmsService().getVersion();
     }
 
     @Override
     public Observable<ResponseBody> downloadAPK() {
-        return LogisticMain.getInstance().getLogisticService().downloadAPK();
+        return MmsMain.getInstance().getMmsService().downloadAPK();
     }
 }

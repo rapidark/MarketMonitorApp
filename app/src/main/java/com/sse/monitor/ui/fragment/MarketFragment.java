@@ -1,7 +1,9 @@
 package com.sse.monitor.ui.fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,30 +12,24 @@ import com.sse.monitor.R;
 import com.sse.monitor.core.BaseFragment;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
- * Created by Eric on 2016/5/12.
+ * Created by Eric on 2016/10/14.
  */
-public class HomeFragment extends BaseFragment {
+public class MarketFragment extends BaseFragment {
 
-    @Bind(R.id.market_index_tv_title)
-    TextView mMarketIndexTvTitle;
-    @Bind(R.id.market_index_iv_more)
-    ImageView mMarketIndexIvMore;
-    @Bind(R.id.item_market_tv_title)
-    TextView mItemMarketTvTitle;
+    @Bind(R.id.main_index_market_sh_0000001)
+    GridLayout mSH000001GL;
+
+    /*@Bind(parent = R.id.main_index_market_sh_0000001, value = R.id.item_market_tv_title)
+    TextView mSH000001TvTitle;
     @Bind(R.id.item_market_tv_index)
-    TextView mItemMarketTvIndex;
+    TextView mSH000001TvIndex;
     @Bind(R.id.item_market_tv_update)
-    TextView mItemMarketTvUpdate;
+    TextView mSH000001TvUpdate;
     @Bind(R.id.item_market_tv_percent)
-    TextView mItemMarketTvPercent;
-    @Bind(R.id.market_option_gl_content)
-    GridLayout mMarketOptionGlContent;
-    @Bind(R.id.market_option_gl_total)
-    GridLayout mMarketOptionGlTotal;
-    @Bind(R.id.market_option_gl_bottom)
-    GridLayout mMarketOptionGlBottom;
+    TextView mSH000001TvPercent;*/
 
     @Override
     protected void initData(Bundle savedInstanceState) {
@@ -42,7 +38,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_home;
+        return R.layout.fragment_market;
     }
 
     @Override

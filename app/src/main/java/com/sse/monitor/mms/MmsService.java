@@ -16,7 +16,7 @@ import rx.Observable;
 /**
  * Created by Eric on 2016/4/25.
  */
-public interface LogisticService {
+public interface MmsService {
 
     @GET("app/getVersion")
     Observable<ResultBean<VersionBean>> getVersion();

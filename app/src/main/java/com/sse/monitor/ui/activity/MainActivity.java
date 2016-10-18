@@ -13,6 +13,7 @@ import com.sse.monitor.di.components.MainComponent;
 import com.sse.monitor.ui.adapter.MainViewPagerAdapter;
 import com.sse.monitor.ui.fragment.HomeFragment;
 import com.sse.monitor.ui.fragment.CustomerFragment;
+import com.sse.monitor.ui.fragment.MarketFragment;
 import com.sse.monitor.ui.fragment.ProfileFragment;
 
 import java.util.ArrayList;
@@ -66,6 +67,9 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
                         rgTab.check(R.id.rb_home);
                         break;
                     case 1:
+                        rgTab.check(R.id.rb_market);
+                        break;
+                    case 2:
                         rgTab.check(R.id.rb_profile);
                         break;
                 }
@@ -84,8 +88,11 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
                     case R.id.rb_home:
                         vpMain.setCurrentItem(0, false);
                         break;
-                    case R.id.rb_profile:
+                    case R.id.rb_market:
                         vpMain.setCurrentItem(1, false);
+                        break;
+                    case R.id.rb_profile:
+                        vpMain.setCurrentItem(2, false);
                         break;
                 }
             }
@@ -96,8 +103,10 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
     protected void initData() {
         fgContent = new ArrayList<>();
         HomeFragment homeFragment = new HomeFragment();
+        MarketFragment marketFragment = new MarketFragment();
         ProfileFragment profileFragment = new ProfileFragment();
         fgContent.add(homeFragment);
+        fgContent.add(marketFragment);
         fgContent.add(profileFragment);
         vpMain.setAdapter(new MainViewPagerAdapter(
                 getSupportFragmentManager(), fgContent));

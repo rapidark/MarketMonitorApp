@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/market_index_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主要指数"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/main_red"/>
+
+    <ImageView
+        android:id="@+id/market_index_iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        android:layout_alignTop="@+id/market_index_tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    <GridLayout
+        android:id="@+id/market_index_gl_content"
+        android:layout_below="@+id/market_index_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        android:columnCount="3">
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+                 />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+                 />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+                 />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_columnWeight="1"
+                 android:layout_rowWeight="1"
+                 />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_columnWeight="1"
+                 android:layout_rowWeight="1"
+                 />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_columnWeight="1"
+                 android:layout_rowWeight="1"
+                 />
+    </GridLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

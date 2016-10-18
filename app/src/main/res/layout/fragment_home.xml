@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_login_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/market_index_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主要指数"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/main_red"/>
+
+    <ImageView
+        android:id="@+id/market_index_iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        android:layout_alignTop="@+id/market_index_tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    <GridLayout
+        android:id="@+id/market_index_gl_content"
+        android:layout_below="@+id/market_index_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        android:columnCount="3">
+        <include layout="@layout/item_market"
+                 android:id="@+id/main_index_market_sh_0000001"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:id="@+id/main_index_market_sz_399001"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_columnWeight="1"
+                 android:layout_rowWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_columnWeight="1"
+                 android:layout_rowWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_columnWeight="1"
+                 android:layout_rowWeight="1"
+            />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/market_futures_tv_title"
+        android:layout_below="@+id/market_index_gl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="股指期货"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/main_red"/>
+
+    <ImageView
+        android:id="@+id/market_futures_iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        android:layout_alignTop="@+id/market_futures_tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    <GridLayout
+        android:id="@+id/market_futures_gl_content"
+        android:layout_below="@+id/market_futures_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:columnCount="3">
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/market_futures_gl_total"
+        android:layout_below="@+id/market_futures_gl_content"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        android:columnCount="8">
+
+        <TextView android:text="    "
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="(亿元)"
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="买入"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="卖出"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="净买入"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="已使用"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="剩余"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="   "
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text=""
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="沪港通"
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="9.3"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="10.74"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="-1.22"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"
+                  android:textColor="@color/green"/>
+        <TextView android:text="-1.11"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="131.11"
+                  android:background="@drawable/bg_item_futures"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text=""
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text=""
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="港股通"
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="23.20"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="7.23"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="17.08"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:textColor="@color/red"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="17.24"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="87.80"
+                  android:gravity="center"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text=""
+                  android:gravity="center|left"
+                  android:background="@drawable/bg_item_futures"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/market_option_tv_title"
+        android:layout_below="@+id/market_futures_gl_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="期权"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/main_red"/>
+
+    <ImageView
+        android:id="@+id/market_option_iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        android:layout_alignTop="@+id/market_option_tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    <GridLayout
+        android:id="@+id/market_option_gl_content"
+        android:layout_below="@+id/market_option_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:columnCount="3">
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+
+        <include layout="@layout/item_market"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_rowWeight="1"
+                 android:layout_columnWeight="1"
+            />
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/market_option_gl_total"
+        android:layout_below="@+id/market_option_gl_content"
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_item_futures"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        android:columnCount="6">
+
+        <TextView android:text=""
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnSpan="2"/>
+
+        <TextView android:text="卖出"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="净买入"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="已使用"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="当月合约成交"
+                  android:textSize="12sp"
+                  android:gravity="center|bottom"
+                  android:background="@color/white"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="成交"
+                  android:gravity="center|right"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="0.5"/>
+
+        <TextView android:text="(万张)"
+                  android:gravity="center|left"
+                  android:textSize="12sp"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="0.5"/>
+
+        <TextView android:text="10.74"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="-1.22"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"
+                  android:textColor="@color/green"/>
+        <TextView android:text="-1.11"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="11.03万张"
+                  android:textSize="12sp"
+                  android:gravity="center|bottom"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="持仓"
+                  android:gravity="center|right"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="0.5"/>
+
+        <TextView android:text="(万张)"
+                  android:gravity="center|left"
+                  android:textSize="12sp"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="0.5"/>
+
+        <TextView android:text="7.23"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="17.08"
+                  android:gravity="center"
+                  android:textColor="@color/red"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="17.24"
+                  android:gravity="center"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="占比46.19%"
+                  android:textSize="12sp"
+                  android:gravity="center|top"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/market_option_gl_bottom"
+        android:layout_below="@+id/market_option_gl_total"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_item_futures"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:rowCount="1"
+        android:columnCount="6">
+
+        <TextView android:text="权利金成交"
+                  android:gravity="center|right"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+
+        <TextView android:text="1.2亿"
+                  android:paddingLeft="5dp"
+                  android:gravity="center|left"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="0.5"/>
+
+        <TextView android:text="名义成交"
+                  android:gravity="center|right"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="50.36亿"
+                  android:gravity="center|left"
+                  android:paddingLeft="5dp"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="总成交"
+                  android:gravity="center|right"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+        <TextView android:text="64675"
+                  android:paddingLeft="5dp"
+                  android:gravity="center|left"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"/>
+    </GridLayout>
+</RelativeLayout>

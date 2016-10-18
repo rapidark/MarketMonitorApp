@@ -2,7 +2,7 @@ package com.sse.monitor.di.modules;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.sse.monitor.mms.LogisticApi;
-import com.sse.monitor.mms.LogisticService;
+import com.sse.monitor.mms.MmsService;
 
 import java.util.concurrent.TimeUnit;
 
@@ -42,7 +42,7 @@ public class LogisticApiModule {
 
     @Provides
     @Singleton
-    protected LogisticService provideLogisticService(Retrofit retrofit) {
-        return retrofit.create(LogisticService.class);
+    protected MmsService provideLogisticService(Retrofit retrofit) {
+        return retrofit.create(MmsService.class);
     }
 }
