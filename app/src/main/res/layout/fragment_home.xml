@@ -32,7 +32,7 @@
         android:orientation="horizontal"
         android:rowCount="2"
         android:columnCount="3">
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sh_0000001"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                  android:layout_columnWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sz_399001"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -48,28 +48,28 @@
                  android:layout_columnWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_rowWeight="1"
                  android:layout_columnWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_columnWeight="1"
                  android:layout_rowWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_columnWeight="1"
                  android:layout_rowWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_columnWeight="1"
@@ -105,21 +105,21 @@
         android:orientation="horizontal"
         android:rowCount="1"
         android:columnCount="3">
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_rowWeight="1"
                  android:layout_columnWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_rowWeight="1"
                  android:layout_columnWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_rowWeight="1"
@@ -299,21 +299,21 @@
         android:orientation="horizontal"
         android:rowCount="1"
         android:columnCount="3">
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_rowWeight="1"
                  android:layout_columnWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_rowWeight="1"
                  android:layout_columnWeight="1"
             />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_rowWeight="1"

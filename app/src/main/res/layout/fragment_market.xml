@@ -23,7 +23,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"/>
 
-    <GridLayout
+    <!--<GridLayout
         android:id="@+id/market_index_gl_content"
         android:layout_below="@+id/market_index_tv_title"
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
         android:orientation="horizontal"
         android:rowCount="2"
         android:columnCount="3">
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sh_0000001"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                  android:layout_columnWeight="1"
                  />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sz_399001"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                  android:layout_columnWeight="1"
                  />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sz_399006"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                  android:layout_columnWeight="1"
                  />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sh_0000300"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                  android:layout_rowWeight="1"
                  />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sh_0000016"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -71,14 +71,23 @@
                  android:layout_rowWeight="1"
                  />
 
-        <include layout="@layout/item_market"
+        <include layout="@layout/item_index"
                  android:id="@+id/main_index_market_sh_0000905"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_columnWeight="1"
                  android:layout_rowWeight="1"
                  />
-    </GridLayout>
+    </GridLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/market_index_rv_content"
+        android:layout_below="@+id/market_index_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+    </android.support.v7.widget.RecyclerView>
 
 
 

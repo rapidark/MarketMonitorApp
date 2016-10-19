@@ -24,4 +24,6 @@
 
     <color name="item_text">#FF000000</color>
 
+    <color name="text_color_day">@color/black</color>
+
 </resources>
