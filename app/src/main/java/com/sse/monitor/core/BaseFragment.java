@@ -60,7 +60,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected void lazyLoad() {
         //Logger.d(isPrepared + "," + isVisible);
-        //Log.d(TAG,isPrepared + "," + isVisible);
+        Log.d(TAG,isPrepared + "," + isVisible);
         if (!isPrepared || !isVisible) {
             return;
         }

@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="主要指数"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginLeft="10dp"
         android:textColor="@color/main_red"/>
 
@@ -23,78 +23,70 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"/>
 
-    <!--<GridLayout
-        android:id="@+id/market_index_gl_content"
-        android:layout_below="@+id/market_index_tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:orientation="horizontal"
-        android:rowCount="2"
-        android:columnCount="3">
-        <include layout="@layout/item_index"
-                 android:id="@+id/main_index_market_sh_0000001"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_rowWeight="1"
-                 android:layout_columnWeight="1"
-                 />
-
-        <include layout="@layout/item_index"
-                 android:id="@+id/main_index_market_sz_399001"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_rowWeight="1"
-                 android:layout_columnWeight="1"
-                 />
-
-        <include layout="@layout/item_index"
-                 android:id="@+id/main_index_market_sz_399006"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_rowWeight="1"
-                 android:layout_columnWeight="1"
-                 />
-
-        <include layout="@layout/item_index"
-                 android:id="@+id/main_index_market_sh_0000300"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_columnWeight="1"
-                 android:layout_rowWeight="1"
-                 />
-
-        <include layout="@layout/item_index"
-                 android:id="@+id/main_index_market_sh_0000016"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_columnWeight="1"
-                 android:layout_rowWeight="1"
-                 />
-
-        <include layout="@layout/item_index"
-                 android:id="@+id/main_index_market_sh_0000905"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_columnWeight="1"
-                 android:layout_rowWeight="1"
-                 />
-    </GridLayout>-->
-
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/market_index_rv_content"
+        android:id="@+id/market_index_rv_main"
         android:layout_below="@+id/market_index_tv_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="140dp"
         android:overScrollMode="never">
 
     </android.support.v7.widget.RecyclerView>
 
+    <TextView
+        android:id="@+id/market_futures_tv_title"
+        android:layout_below="@+id/market_index_rv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="股指期货"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/main_red"/>
 
+    <ImageView
+        android:id="@+id/market_futures_iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        android:layout_alignTop="@+id/market_futures_tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/market_index_rv_futures"
+        android:layout_below="@+id/market_futures_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:overScrollMode="never">
 
+    </android.support.v7.widget.RecyclerView>
 
+    <TextView
+        android:id="@+id/market_option_tv_title"
+        android:layout_below="@+id/market_index_rv_futures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全球指数"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/main_red"/>
 
+    <ImageView
+        android:id="@+id/market_option_iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        android:layout_alignTop="@+id/market_option_tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/market_index_rv_global"
+        android:layout_below="@+id/market_option_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:overScrollMode="never">
 
-
+    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

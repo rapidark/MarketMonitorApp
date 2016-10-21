@@ -44,25 +44,33 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
     @Override
     public IndexViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = this.mLayoutInflater.inflate(R.layout.item_index, parent, false);
-        //View view = LayoutInflater.from(mContext).inflate(R.layout.item_index,parent,false);
         return new IndexViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(IndexViewHolder holder, int position) {
-        Log.d("IndexAdapter","onBindViewHolder position:"+position);
+        //Log.d("IndexAdapter","onBindViewHolder position:"+position);
         IndexBean indexBean = mIndexData.get(position);
-        holder.tvTitle.setText(indexBean.getSymbol());
+        if(indexBean.getSymbol().startsWith("IC")){
+            holder.tvTitle.setText("中证"+indexBean.getSymbol().substring(2));
+        }else if(indexBean.getSymbol().startsWith("IF")){
+            holder.tvTitle.setText("沪深"+indexBean.getSymbol().substring(2));
+        }else if(indexBean.getSymbol().startsWith("IH")){
+            holder.tvTitle.setText("上证"+indexBean.getSymbol().substring(2));
+        }else{
+            holder.tvTitle.setText(indexBean.getSymbol());
+        }
+
         holder.tvIndex.setText(String.format("%.2f", indexBean.getIndex()));
         holder.tvPrice.setText(String.format("%.2f", indexBean.getPrice()));
         holder.tvRate.setText(String.format("%.2f", indexBean.getRate()) + "%");
-        if(indexBean.getRate()>0){
+        if(indexBean.getPrice()>0){
             holder.tvIndex.setTextColor(mContext.getResources().getColor(R.color.red));
             holder.tvPrice.setTextColor(mContext.getResources().getColor(R.color.red));
             holder.tvRate.setTextColor(mContext.getResources().getColor(R.color.red));
             holder.tvPrice.setText("+"+holder.tvPrice.getText());
             holder.tvRate.setText("+"+holder.tvRate.getText());
-        }else if(indexBean.getRate()==0){
+        }else if(indexBean.getPrice()==0){
             holder.tvIndex.setTextColor(mContext.getResources().getColor(R.color.black));
             holder.tvPrice.setTextColor(mContext.getResources().getColor(R.color.black));
             holder.tvRate.setTextColor(mContext.getResources().getColor(R.color.black));

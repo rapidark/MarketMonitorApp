@@ -10,6 +10,9 @@ import com.sse.monitor.core.BaseActivity;
 import com.sse.monitor.di.HasComponent;
 import com.sse.monitor.di.components.DaggerMainComponent;
 import com.sse.monitor.di.components.MainComponent;
+import com.sse.monitor.mms.MmsConstants;
+import com.sse.monitor.presenter.MainPresenter;
+import com.sse.monitor.presenter.iview.MainView;
 import com.sse.monitor.ui.adapter.MainViewPagerAdapter;
 import com.sse.monitor.ui.fragment.HomeFragment;
 import com.sse.monitor.ui.fragment.MarketFragment;
@@ -23,11 +26,13 @@ import butterknife.BindView;
 /**
  * Created by Eric on 2016/5/5.
  */
-public class MainActivity extends BaseActivity implements HasComponent<MainComponent> {
+public class MainActivity extends BaseActivity implements MainView,HasComponent<MainComponent> {
     @BindView(R.id.vp_main) ViewPager vpMain;
     @BindView(R.id.rg_tabbar) RadioGroup rgTab;
     private List<Fragment> fgContent;
     private MainComponent mainComponent;
+
+    MainPresenter mMainPresenter;
 
     private void initializeInjector() {
         this.mainComponent = DaggerMainComponent.builder()
@@ -116,5 +121,30 @@ public class MainActivity extends BaseActivity implements HasComponent<MainCompo
     @Override
     public MainComponent getComponent() {
         return mainComponent;
+    }
+
+    @Override
+    public void onFailure(String msg) {
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        this.mMainPresenter = new MainPresenter();
+        this.mMainPresenter.attachView(this);
+        String list = "s_" + MmsConstants.SH_000001
+                + "," + "s_" + MmsConstants.SZ_399001
+                + "," + "s_" + MmsConstants.SZ_399006
+                + "," + "s_" + MmsConstants.SH_000300
+                + "," + "s_" + MmsConstants.SH_000016
+                + "," + "s_" + MmsConstants.SH_000905;
+        //this.mMainPresenter.loadIndexData(list);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //this.mMainPresenter.stopLoadIndexData();
     }
 }
