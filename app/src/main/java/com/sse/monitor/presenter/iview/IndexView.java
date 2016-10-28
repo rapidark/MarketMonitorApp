@@ -12,4 +12,5 @@ public interface IndexView extends MvpView {
     void renderMainIndexList(List<IndexBean> indexBeanList);
     void renderGolbalIndexList(List<IndexBean> indexBeanList);
     void renderFuturesIndexList(List<IndexBean> indexBeanList);
+    void viewIndex(IndexBean indexBean);
 }

@@ -24,6 +24,12 @@ import butterknife.ButterKnife;
  * Created by Eric on 2016/10/19.
  */
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {
+    public interface OnItemClickListener {
+        void onIndexItemClicked(IndexBean indexBean);
+    }
+
+    private OnItemClickListener mOnItemClickListener;
+
     private List<IndexBean> mIndexData;
     private LayoutInflater mLayoutInflater;
     private Context mContext;
@@ -50,7 +56,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
     @Override
     public void onBindViewHolder(IndexViewHolder holder, int position) {
         //Log.d("IndexAdapter","onBindViewHolder position:"+position);
-        IndexBean indexBean = mIndexData.get(position);
+        final IndexBean indexBean = mIndexData.get(position);
         if(indexBean.getSymbol().startsWith("IC")){
             holder.tvTitle.setText("中证"+indexBean.getSymbol().substring(2));
         }else if(indexBean.getSymbol().startsWith("IF")){
@@ -79,6 +85,18 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
             holder.tvPrice.setTextColor(mContext.getResources().getColor(R.color.green));
             holder.tvRate.setTextColor(mContext.getResources().getColor(R.color.green));
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mOnItemClickListener!=null){
+                    mOnItemClickListener.onIndexItemClicked(indexBean);
+                }
+            }
+        });
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
     }
 
     @Override

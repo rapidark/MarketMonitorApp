@@ -8,6 +8,7 @@ import com.shiki.okttp.OkHttpUtils;
 import com.shiki.utils.ReservoirUtils;
 import com.shiki.utils.StringUtils;
 import com.sse.monitor.bean.IndexBean;
+import com.sse.monitor.bean.MessageBean;
 import com.sse.monitor.core.mvp.BasePresenter;
 import com.sse.monitor.mms.MmsApi;
 import com.sse.monitor.mms.MmsConstants;
@@ -25,7 +26,6 @@ import javax.inject.Inject;
 import okhttp3.Response;
 import rx.Observable;
 import rx.Subscriber;
-import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
@@ -290,8 +290,14 @@ public class IndexPresenter extends BasePresenter<IndexView> {
                                     if (contents.length >= 4) {
                                         indexBean.setSymbol(indexBean.getSecurityId());
                                         indexBean.setIndex(Double.valueOf(contents[7]));
-                                        indexBean.setPrice(Double.valueOf(contents[7])-Double.valueOf(contents[14]));
-                                        indexBean.setRate((Double.valueOf(contents[7])-Double.valueOf(contents[14]))*100/Double.valueOf(contents[14]));
+                                        if(Double.valueOf(contents[7]) == 0){
+                                            indexBean.setPrice(0);
+                                            indexBean.setRate(0);
+                                        }else{
+                                            indexBean.setPrice(Double.valueOf(contents[7])-Double.valueOf(contents[14]));
+                                            indexBean.setRate((Double.valueOf(contents[7])-Double.valueOf(contents[14]))*100/Double.valueOf(contents[14]));
+                                        }
+
                                     }
                                     indexBeanList.add(indexBean);
                                 }
@@ -334,5 +340,9 @@ public class IndexPresenter extends BasePresenter<IndexView> {
                         IndexPresenter.this.getMvpView().renderFuturesIndexList(indexBeanList);
                     }
                 }));
+    }
+
+    public void onIndexClicked(IndexBean indexBean) {
+        this.getMvpView().viewIndex(indexBean);
     }
 }

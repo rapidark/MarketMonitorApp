@@ -3,10 +3,10 @@
           package="com.sse.monitor">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
 
     <application
         android:name=".MonitorApplication"
@@ -15,39 +15,42 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- 配置APP ID -->
         <meta-data
             android:name="BUGLY_APPID"
-            android:value="900055611" />
+            android:value="900055611"/>
         <!-- 配置APP版本号 -->
         <meta-data
             android:name="BUGLY_APP_VERSION"
-            android:value="xypNMhasr1YMcjVT" />
+            android:value="xypNMhasr1YMcjVT"/>
         <!-- 配置APP渠道号 -->
         <meta-data
             android:name="BUGLY_APP_CHANNEL"
-            android:value="Development" />
-        <!-- 配置Bugly调试模式（true或者false）-->
+            android:value="Development"/>
+        <!-- 配置Bugly调试模式（true或者false） -->
         <meta-data
             android:name="BUGLY_ENABLE_DEBUG"
-            android:value="true" />
+            android:value="true"/>
+
         <activity
             android:name=".ui.activity.MainActivity"
             android:theme="@style/TranslucentAppTheme">
+
+        </activity>
+        <activity android:name=".ui.activity.LoginActivity">
+        </activity>
+        <activity android:name=".ui.activity.MessageDetailActivity"/>
+        <activity android:name=".ui.activity.GestureLockActivity">
+        </activity>
+        <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.LoginActivity">
-
-        </activity>
-        <activity android:name=".ui.activity.MessageDetailActivity"/>
-        <activity android:name=".ui.activity.GestureLockActivity" >
-
-        </activity>
-
-        <activity android:name=".ui.activity.SplashActivity">
+        <activity android:name=".ui.activity.IndexDetailActivity">
 
         </activity>
     </application>

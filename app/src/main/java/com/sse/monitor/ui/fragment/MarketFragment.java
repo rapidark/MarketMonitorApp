@@ -1,5 +1,6 @@
 package com.sse.monitor.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
@@ -13,6 +14,7 @@ import com.sse.monitor.di.components.MainComponent;
 import com.sse.monitor.mms.MmsConstants;
 import com.sse.monitor.presenter.IndexPresenter;
 import com.sse.monitor.presenter.iview.IndexView;
+import com.sse.monitor.ui.activity.IndexDetailActivity;
 import com.sse.monitor.ui.adapter.IndexAdapter;
 
 import java.util.List;
@@ -99,7 +101,14 @@ public class MarketFragment extends BaseFragment implements IndexView {
 
     @Override
     protected void initListeners() {
-
+        mMainIndexAdapter.setOnItemClickListener(new IndexAdapter.OnItemClickListener() {
+            @Override
+            public void onIndexItemClicked(IndexBean indexBean) {
+                if(indexBean!=null){
+                    mIndexPresenter.onIndexClicked(indexBean);
+                }
+            }
+        });
     }
 
     @Override
@@ -126,5 +135,11 @@ public class MarketFragment extends BaseFragment implements IndexView {
     @Override
     public void renderFuturesIndexList(List<IndexBean> indexBeanList) {
         mFuturesIndexAdapter.setIndexData(indexBeanList);
+    }
+
+    @Override
+    public void viewIndex(IndexBean indexBean) {
+        Intent intent = IndexDetailActivity.getCallingIntent(getActivity(),indexBean);
+        startActivity(intent);
     }
 }
