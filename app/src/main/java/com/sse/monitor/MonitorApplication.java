@@ -13,6 +13,8 @@ import com.sse.monitor.di.modules.LogisticApiModule;
 import com.sse.monitor.mms.LogisticApi;
 import com.tencent.bugly.crashreport.CrashReport;
 
+import cn.jpush.android.api.JPushInterface;
+
 /**
  * Created by Eric on 2016/4/19.
  */
@@ -40,6 +42,7 @@ public class MonitorApplication extends Application {
         initGson();
         initReservoir();
         initBugly();
+        initJPush();
     }
 
     private void initInjector() {
@@ -63,5 +66,10 @@ public class MonitorApplication extends Application {
 
     private void initBugly() {
         CrashReport.initCrashReport(getApplicationContext());
+    }
+
+    private void initJPush() {
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
     }
 }
